@@ -1,0 +1,132 @@
+.brush {
+  transform: scaleY(1);
+  transform: rotate(110deg);
+}
+.guidedInput {
+  border: 0.2rem solid #4bbcc0 !important;
+  width: 100%;
+  font-family: "Amatic SC", Bold !important;
+  font-weight: 700 !important;
+  font-size: 2vw !important;
+  height: 7vh;
+  color: #4bbcc0 !important;
+}
+.guidedInput::placeholder {
+  color: #4bbcc0 !important;
+}
+
+.column {
+  width: 20rem !important;
+}
+.custonBtn {
+  width: 60%;
+  font-weight: bold !important;
+}
+.rotate {
+  transform: rotate(-66deg);
+}
+.options {
+  width: 90%;
+}
+.submit {
+  width: 40% !important;
+  /* height: 3rem !important; */
+  font-size: xx-large !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.toggle {
+  background-color: #fff !important;
+  height: 1px !important;
+  margin-bottom: 10px;
+  width: 100%;
+  box-shadow: 0px !important;
+}
+.textHolder {
+  width: 100%;
+  height: 60%;
+  margin-top: 3%;
+}
+.textRow {
+  border-bottom: 0.4rem dotted #d2274b;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.my-row {
+  width: 70%;
+}
+.submitRow {
+  width: 50%;
+}
+.box {
+  width: 40%;
+  height: 70%;
+  padding-top: 5%;
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.boxform {
+  width: 30%;
+  height: 70%;
+  flex: 1;
+  padding: 2%;
+  justify-content: center;
+}
+.contactDiv {
+  width: 40%;
+}
+@media only screen and (max-width: 768px) {
+  .box h5 {
+    font-size: large;
+  }
+  .contactDiv {
+    width: 100%;
+  }
+  .submitRow {
+    width: 100%;
+  }
+  .box {
+    font-size: x-large;
+    height: 70%;
+  }
+  .boxform {
+    height: 80%;
+  }
+  .custonBtn {
+    width: 100%;
+    font-weight: bold !important;
+  }
+  .style {
+    font-size: xx-large;
+  }
+  .ins {
+    font-size: x-small;
+  }
+  .pen {
+    height: 40%;
+  }
+  .font {
+    font-size: medium !important;
+  }
+  .submit {
+    width: 70% !important;
+    font-size: x-large !important;
+    margin-top: 0 !important;
+    padding-top: 5px !important;
+    margin-bottom: 1rem !important;
+  }
+}
+.purplebg {
+  background-color: #804cbf !important;
+}
+.tint {
+  background-color: #bdcd00 !important;
+}
+.bgmagenta {
+  background-color: #d2274b !important;
+}
+.rose {
+  background-color: #b065a1 !important;
+}

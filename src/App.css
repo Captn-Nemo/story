@@ -1,0 +1,213 @@
+.App {
+  margin: 0px !important;
+  padding: 0px !important;
+
+  /* background-color: #fffaf0; */
+}
+
+.page {
+  background: #ffffff;
+}
+.logo {
+  width: 100px;
+  cursor: pointer;
+}
+
+.sheraa {
+  width: 80px;
+  margin: 0px auto 5px auto;
+}
+
+.sheraa-m {
+  left: 150px;
+  top: 5px;
+  height: 22px;
+  position: absolute;
+}
+
+.App-nav,
+.App-nav-m {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  z-index: 10;
+  font-family: "patrick_handregular";
+  font-size: 24px;
+}
+
+.App-nav a:hover,
+.App-nav a.active,
+.levelmenu:hover {
+  color: #fa8807;
+  /* background-color: white; */
+}
+
+.levelmenu.active,
+.levelmenu:hover .submenu:hover,
+.levelmenu:hover .submenu.active {
+  color: #4bbcc0;
+}
+
+.levelmenu .submenu {
+  display: none;
+  padding-left: 15px;
+  margin: 0px;
+  /* background-color: white; */
+  width: inherit;
+}
+
+.levelmenu:hover .submenu {
+  display: flex;
+}
+
+.App-nav ul,
+.App-nav-m ul {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+/*
+.dir-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+*/
+.App-nav-m {
+  display: none;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) 
+.topnav #myLinks {
+  display: none;
+  background-color: #fdc700;
+  background-color: white;
+}
+
+
+#myLinks{
+  padding-left:15px;
+  padding-right:15px;
+}
+
+/* Style navigation menu links 
+.topnav li {
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+}
+
+/* Style the hamburger menu 
+.topnav li.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+*/
+/* Add a grey background color on mouse-over 
+.topnav li:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) 
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+*/
+
+@media only screen and (max-width: 1150px) {
+  .App-nav {
+    display: none;
+  }
+
+  .App-nav-m {
+    position: fixed;
+    display: flex;
+    left: 0px;
+    top: 0px;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: transparent;
+    justify-content: left;
+    /* width: 100vw; */
+    height: 65px;
+    padding: 0px 0px;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .App-nav-m ul,
+  .App-nav-m a {
+    margin: 5px;
+    font-size: 22px;
+    color: white;
+  }
+
+  .App-nav-m ul:hover,
+  .App-nav-m a:hover,
+  .App-nav-m ul.active,
+  .App-nav-m a.active {
+    color: #fa8807;
+  }
+
+  .levelmenu .submenu {
+    color: #fa8807;
+    margin: 0px;
+    padding-left: 5px; /*
+    border-bottom:1px solid black;*/
+  }
+
+  .levelmenu .submenu:hover,
+  .levelmenu .submenu.active {
+    background-color: transparent;
+    color: #ffffff;
+  }
+
+  .App-content {
+    /* margin-top: 70px; */
+    background-color: floralwhite;
+  }
+
+  .logo {
+    width: 65px;
+  }
+
+  .socialbtn {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+  }
+
+  .socialbtn a {
+    padding: 1px;
+    margin: 0px;
+    height: 20px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+  background-color: transparent;
+  opacity: 0.2;
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-track {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%, 0, 0 0.4);
+  opacity: 0.2;
+}
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+  border-radius: 1rem;
+}
+.section {
+  height: 100vh;
+}

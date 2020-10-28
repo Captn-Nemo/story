@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1157.64" height="818.4" viewBox="0 0 3508 2480">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 29.868px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        font-family: Asap;
+        font-weight: 500;
+      }
+
+      .cls-2 {
+        font-size: 29.868px;
+      }
+
+      .cls-3 {
+        font-size: 29.056px;
+      }
+    </style>
+  </defs>
+  <text id="My_name_is__I_am_5_years_old._After_a_very_long_break_of_6_months_I_am_finally_going_back_to_school._" data-name="My name is I am 5 years old. After a very long break of 6 months, I am finally going back to school. " class="cls-1" transform="translate(185.123 135.534) scale(2.273)">My name is Inara<tspan x="0" dy="35.842">I am 5 years old.</tspan><tspan x="0" dy="35.842">After a very long break of</tspan><tspan x="0" dy="35.842">6 months, I am finally going back to school.</tspan></text>
+  <text id="I_am_so_happy_excited_and_a_little_scared." data-name="I am so happy, excited and a little scared." class="cls-2" transform="translate(193.002 2223.062) scale(2.273)">I am so happy, excited and a little scared.</text>
+  <text id="This_is_my_school_Safa_Community_School_What_I_love_most_about_my_school_is_the_play_ground" data-name="This is my school Safa Community School  What I love most about my school is the play ground" class="cls-3" transform="translate(2312.684 2058.266) scale(2.273)">This is my school<tspan x="0" dy="34.867">Safa Community School</tspan><tspan x="0" dy="34.867"> What I love most about my school is the play ground</tspan></text>
+</svg>

@@ -1,0 +1,109 @@
+.customInput {
+  width: 100% !important;
+  height: 2.6rem !important;
+}
+
+.subsscribeBtn {
+  border: 0.12rem solid green !important;
+}
+.wrapper {
+  /* border: 0.2rem solid yellow; */
+  height: auto;
+}
+
+.headerBtn {
+  background-color: white;
+}
+.thumcont {
+  width: 50%;
+  padding: 1%;
+  overflow: hidden;
+  /* margin-left: 0 !important; */
+  margin-right: 1%;
+}
+.signUptitle {
+  font-size: medium;
+  font-weight: bold;
+}
+.signUpText {
+  font-size: 12px;
+  font-weight: bold;
+}
+.details {
+  width: 100%;
+}
+.info {
+  width: 30% !important;
+}
+.Bottomnavitem {
+  /* text-transform: uppercase; */
+  /* font-size: large !important; */
+  /* font-weight: bold !important; */
+  color: black !important;
+  font-size: medium !important;
+  padding: 0 !important;
+  font-family: "asapbold";
+  margin: 0 !important;
+  /* background-color: aqua; */
+}
+.fa-facebook {
+  background: #ffff;
+  color: #fdc700;
+  font-size: x-large !important;
+  width: 10%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 2rem; */
+  padding: 2%;
+  margin-left: 2.5%;
+}
+.fa-facebook:hover {
+  text-decoration: none;
+  border: 1px solid #fff;
+  background: #fdc700;
+  color: #ffffff;
+}
+.fa-instagram {
+  background: #ffff;
+  color: #fdc700;
+  font-size: x-large !important;
+  width: 10%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 2rem; */
+  padding: 2%;
+}
+.fa-instagram:hover {
+  text-decoration: none;
+  border: 1px solid #fff;
+  background: #fdc700;
+  color: #ffffff;
+}
+#basic-nav-dropdownBottom {
+  /* font-weight: bold !important; */
+  color: black !important;
+  font-size: medium !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  /* background-color: aqua; */
+}
+.header-image {
+  width: 100%;
+  margin-left: -50px;
+}
+@media only screen and (max-width: 786px) {
+  .h5 {
+    font-size: large !important;
+  }
+  .thumcont {
+    width: 20%;
+    padding: 1%;
+    overflow: hidden;
+    /* margin-left: 0 !important; */
+    margin-right: 1%;
+  }
+}

@@ -1,0 +1,33 @@
+.welcome {
+  border: 1px solid lightgrey;
+  margin-top: 30px;
+  padding: 20px;
+  width: 40% !important;
+  box-shadow: 5px 9px 20px #999;
+}
+/* .welcome button {
+  position: relative;
+  top: 76px;
+  margin: auto;
+  left: 190px;
+} */
+.welcome h3 {
+  margin-bottom: 20px;
+}
+.custtomLabel {
+  font-size: 20px;
+  padding-bottom: 0px;
+  margin: 0;
+}
+/* .welcome p {
+  margin-bottom: 58px;
+} */
+@media only screen and (max-width: 768px) {
+  .welcome {
+    width: 90% !important;
+    font-size: small;
+  }
+  .welcome h3 {
+    font-size: medium;
+  }
+}

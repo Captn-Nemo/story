@@ -1,0 +1,20 @@
+<svg id="cover" xmlns="http://www.w3.org/2000/svg"  width="100%" height="100%" viewBox="0 0 1748 2480">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 43.531px;
+        text-anchor: middle;
+        font-family: Caveat Brush;
+      }
+
+      .cls-2 {
+        font-size: 63.654px;
+      }
+
+      .cls-3 {
+        font-family: Cabin Sketch;
+      }
+    </style>
+  </defs>
+  <text id="MOHAMMED_GOES_BACK_TO_SCHOOL_Safa_Community_School" data-name="MOHAMMED GOES BACK TO SCHOOL Safa Community School" class="cls-1" transform="translate(874 380.886) scale(2.061)"><tspan x="0">MOHAMMED GOES</tspan><tspan class="cls-2" x="0" dy="76.385">BACK TO SCHOOL</tspan><tspan class="cls-3" x="0" dy="52.237">Safa Community School</tspan></text>
+</svg>

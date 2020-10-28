@@ -1,0 +1,74 @@
+.TextAreaForm{
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-width: 500px;
+  min-height: 80px;
+  height: 70vh;
+  width:100vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.TextAreaForm img{
+  display: inline-block;
+  position: absolute;
+  height:15vh;
+  top:-10px;
+  transform: rotate(-10deg);
+}
+
+.TextArea{
+ /* height:40px;*/
+  position: absolute;
+  display: inline-flex;
+  width:80%;
+  height:calc(80% - 9vh);
+  top:15vh;
+  background-color: transparent;
+  border: transparent;
+  font-family: 'patrick_handregular';
+  font-size: 1.2rem;
+  resize: none;
+  text-align: justify;
+  outline: none !important;
+}
+
+.submission{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.teal-b{
+  border-color: #4bbcc0ff;
+}
+
+.teal-s{
+  box-shadow: 0px 4px 2px #4bbcc0ff;
+}
+
+.orange-b{
+  border-color: #fa8807ff;
+}
+
+.orange-s{
+  box-shadow: 0px 4px 2px #fa8807ff;
+}
+
+.yellow-b{
+  border-color: #fdc700ff;
+}
+
+.yellow-s{
+  box-shadow: 0px 4px 2px #fdc700ff;
+}
+
+.purple-b{
+  border-color: #804cbfff;
+}
+
+.purple-s{
+  box-shadow: 0px 4px 2px #804cbfff;
+}

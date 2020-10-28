@@ -1,0 +1,22 @@
+.header {
+  /* background-image: url("../assets/h_bg.png"); */
+}
+
+.discount {
+  height: 2rem;
+}
+
+section {
+  scroll-snap-align: start;
+}
+.main {
+  scroll-snap-type: y mandatory;
+}
+
+.navigation {
+  height: 10vh;
+  box-shadow: 10px 10px 10px #d0d0d0;
+}
+.kids {
+  background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+}

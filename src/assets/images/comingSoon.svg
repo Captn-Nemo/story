@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 30 60">
+   
+   <g transform="translate(-109.97491,-116.242)">
+      <circle
+         r="13.163024"
+         cy="131.3783"
+         cx="124.27959"
+         style="fill:transparent;fill-rule:evenodd;stroke:#4bbcc0;stroke-width:0.983;stroke-miterlimit:4;stroke-dasharray:2.949, 0.98299999999999998;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000" />
+      <ellipse
+         ry="10"
+         rx="10"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#4bbcc0;stroke-width:0.905046;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1;stop-color:#000000;fill-opacity:1;opacity:0.59163987"
+         cx="124.27953"
+         cy="131.379" />
+      <text
+         y="50%"
+         x="50%"
+         style="text-anchor:middle;font-size:3.95703px;line-height:1.25;font-family:'Patrick Hand';-inkscape-font-specification:'Patrick Hand, Normal';letter-spacing:0px;word-spacing:0px;stroke-width:0.219835"
+         xml:space="preserve">
+         <tspan
+            style="text-anchor:middle;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.95703px;font-family:'Fredericka the Great';-inkscape-font-specification:'Fredericka the Great';text-align:center;text-anchor:middle;fill:#804cbf;fill-opacity:1;stroke-width:0.219835"
+            y="130.27562"
+            x="129.5">
+            COMING
+         </tspan>
+         <tspan
+            style="text-anchor:middle;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.95703px;font-family:'Fredericka the Great';-inkscape-font-specification:'Fredericka the Great';text-align:center;text-anchor:middle;fill:#804cbf;fill-opacity:1;stroke-width:0.219835"
+            y="135"
+            x="128.5">
+            SOON
+         </tspan>
+      </text>
+  </g>
+</svg>

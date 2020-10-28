@@ -1,0 +1,19 @@
+.btnCy {
+  font-size: 2.4rem !important;
+  width: 30% !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .font {
+    font-size: medium !important;
+  }
+  .title {
+    font-size: large;
+  }
+  .btnCy {
+    width: 70% !important;
+  }
+  .f18 {
+    font-size: x-large;
+  }
+}

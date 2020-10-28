@@ -1,0 +1,16 @@
+.bg-wrapper {
+  height: 80vh;
+}
+.kidsimg {
+  width: 90%;
+  position: relative;
+  right: -70px;
+}
+
+@media only screen and (max-width: 600px) {
+  .kidsimg {
+    width: 120%;
+    position: relative;
+    right: -35px;
+  }
+}

@@ -1,0 +1,52 @@
+.page-book {
+  width: 100vw;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.book-flip {
+  border: 1px solid;
+}
+
+.book-preview {
+  width: 98%;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-details {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Patrick Hand";
+  font-size: 20px;
+}
+
+.flipdiv {
+  width: 98vh;
+  height: 70vh;
+}
+@media only screen and (max-width: 768px) {
+  .flipdiv {
+    width: 98vh;
+    height: 70vh;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .flipdiv {
+    width: 98vh;
+    height: 60vh;
+  }
+}
+@media (max-width: 375px) {
+  .flipdiv {
+    width: 98vh;
+    height: 30vh;
+  }
+}

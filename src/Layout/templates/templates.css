@@ -1,0 +1,28 @@
+.ageBtn {
+  width: 20%;
+}
+.smalldiv {
+  width: 60% !important;
+}
+.headerSection {
+  height: 40%;
+}
+.lamp {
+  position: relative;
+  z-index: 2;
+  top: -50px;
+  left: 200px;
+}
+
+@media only screen and (max-width: 768px) {
+  .ageBtn {
+    width: 80% !important;
+  }
+  .smalldiv {
+    width: 90% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,127 @@
+.navigation {
+  box-shadow: 0px 10px 10px #999;
+  background: white;
+  width: 100%;
+}
+.nav {
+  width: 100%;
+}
+.navHam {
+  border: 0 !important;
+}
+.navBtn {
+  background-color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navitem {
+  text-transform: uppercase;
+  /* margin: auto; */
+  /* align-self: center; */
+  /* align-content: center; */
+  font-weight: bold !important;
+  color: black !important;
+  font-size: 1vw;
+  /* width: 100%; */
+  letter-spacing: 0.1em !important;
+}
+.navitemDrop {
+  text-transform: uppercase;
+  /* padding-top: 0.6em; */
+  /* padding-left: 1.5rem; */
+  margin-left: 0 !important;
+  font-weight: bold !important;
+  color: black !important;
+  font-size: 1vw;
+  letter-spacing: 0.1em !important;
+}
+#basic-nav-dropdown {
+  text-transform: uppercase;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  color: black !important;
+  padding: 0 !important;
+  font-size: 1vw;
+  letter-spacing: 0.1em !important;
+}
+.navhamburger {
+  align-self: flex-start;
+}
+.navitemRight {
+  text-transform: uppercase;
+  font-weight: bold !important;
+  color: black !important;
+  font-size: 1vw;
+  letter-spacing: 0.1em !important;
+}
+.navitem:hover {
+  color: #fdc700 !important;
+  text-transform: uppercase;
+}
+.navitemDrop:active::before {
+  background-color: #fdc700 !important;
+  text-transform: uppercase;
+}
+.navitemDrop:active {
+  background-color: #fdc700 !important;
+  text-transform: uppercase;
+}
+.navitemDrop.active {
+  background-color: #fdc700 !important;
+  text-transform: uppercase;
+}
+
+.collapse-nav {
+  box-shadow: 10px 10px 10px #d0d0d0;
+}
+.custominput {
+  border: 0.4rem solid #fdc700 !important ;
+  width: 16vw !important;
+  border-radius: 2rem !important;
+}
+.icon {
+  font-size: large;
+}
+@media only screen and (max-width: 400px) {
+  .navLogo {
+    width: 30% !important;
+    padding-left: 0 !important;
+  }
+  .navitem {
+    font-size: 10vw !important;
+  }
+  .navHam {
+    width: 10% !important;
+    overflow: hidden;
+    padding: 0 !important;
+  }
+  #responsive-navbar-nav {
+    width: 10% !important;
+  }
+}
+.navLogo {
+  width: 10vw;
+}
+@media only screen and (max-width: 768px) {
+  .navitem {
+    font-size: 2vw !important;
+  }
+  #basic-nav-dropdown {
+    font-size: 2vw !important;
+  }
+  .navLogo {
+    width: 40vw;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  #basic-nav-dropdown {
+    padding-top: 0.2vw !important;
+  }
+}
+@media only screen and (min-width: 1367px) {
+  .navLogo {
+    /* width: 15vw; */
+  }
+}

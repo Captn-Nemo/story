@@ -1,0 +1,57 @@
+.titleDiv {
+  /* height: 7rem; */
+  align-items: center;
+  background-color: #fdc700;
+  /* background-image: url("../../assets/images/doodleBG.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center; */
+}
+.doodleImg {
+  background-image: url("../../assets/images/doodleBG.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.wrapper {
+  height: 100vh;
+}
+.doodleBar {
+  width: 150%;
+  height: 7rem;
+}
+.btncustom {
+  box-shadow: 0px 8px 5px 0px #666;
+  font-size: 40px !important;
+  width: 10rem;
+  /* height: 3rem; */
+  /* padding-top: 0px !important; */
+  /* margin: 0% !important; */
+  /* padding: 0% !important; */
+}
+.wrapper2 {
+  /* height: 200vh; */
+  background: linear-gradient(to bottom, #fdc700 50%, white 50%);
+}
+.text {
+  font-size: 3.8rem !important;
+}
+.text2 {
+  font-size: 2.8rem !important;
+}
+@media only screen and (max-width: 768px) {
+  .text {
+    font-size: xx-large !important;
+  }
+  .text2 {
+    font-size: large !important;
+  }
+}
+@media only screen and (max-width: 415px) {
+  .text {
+    font-size: x-large !important;
+  }
+  .text2 {
+    font-size: x-small !important;
+  }
+}

@@ -1,0 +1,290 @@
+/* Button Component */
+
+/* button{
+  background: url(../../assets/images/form/button-up-notxt.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  border:none;
+  outline:none; 
+  position: relative;
+  cursor: pointer;
+  font-size:3vmin;
+  font-weight: bold;
+  padding: 5px 15px 15px 15px;
+} */
+.custom {
+  box-shadow: 5px 5px 5px solid #999;
+}
+button:active {
+  /* font-weight: bold; */
+  color: inherit;
+  padding-top: 2px;
+  /* padding: 5px; */
+}
+
+.accordionBlock button {
+  background: none;
+  margin: 5px;
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  padding: 0px;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.accordionBlock button:active {
+  background-image: none;
+  outline: none;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion:hover {
+  color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  /*padding: 0 18px;
+  */
+  background-color: white;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  height: 160px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-image: url("../../assets/images/form/radiogroup.svg");
+}
+
+.panel textarea {
+  background: none;
+  margin-top: 20px;
+  font-size: 20px;
+  width: 90%;
+  height: 70%;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+/* Textbox Component + Accordion Component */
+.formelement {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  /* width:100%; */
+}
+
+.textbox {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+
+.SVGtextbox {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+}
+
+.textboxBlock {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 8px;
+  width: 85%;
+}
+
+.textboxBlock textarea {
+  width: 90%;
+  margin-right: 5px;
+  background: none;
+  border: none;
+  resize: none;
+  height: 24px;
+  outline: none;
+  line-height: 25px;
+  font-size: 16px;
+  font-family: "patrick_handregular";
+}
+
+/* TextArea Component */
+
+.formlongtext {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.longtext {
+  background-image: url(../../assets/images/form/longtext-landscape.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 10px;
+  width: 62vw;
+  height: 75vh;
+  display: flex;
+}
+
+.message {
+  width: 95%;
+  margin: auto auto;
+  height: 20vh;
+  padding: 0px;
+  background-image: none;
+  border: 3px solid #804cbf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message textarea {
+  /* line-height: calc(4ch + 0.8px); */
+  background-image: linear-gradient(
+    transparent,
+    transparent calc(4ch - 0.8px),
+    #e7eff8 0px
+  );
+  background-size: 100% 4ch;
+  resize: none;
+  font-size: 16px;
+  margin-left: 4px;
+  outline: none;
+  border: none;
+  width: 90%;
+  height: 99%;
+}
+
+.longtext textarea {
+  border: none;
+  background-color: transparent !important;
+  width: 51vw;
+  height: 67vh;
+  margin-top: 1vh;
+  margin-left: calc(6vw + 4px);
+  /* transform: skewX(1.5deg) skewY(-0.5deg); */
+  resize: none;
+  font-size: 20px;
+  outline: none;
+  line-height: calc(4ch + 0.8px);
+  background-image: linear-gradient(
+    transparent,
+    transparent calc(4ch - 0.8px),
+    #e7eff8 0px
+  );
+  background-size: 100% 4ch;
+}
+
+/* Radio Component */
+
+.RadioForm {
+  background: url("../../assets/images/form/radiogroup.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 75%;
+  min-height: 180px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.RadioGroup {
+  width: 100%;
+  margin: 2vmin;
+}
+
+.RadioBlock {
+  margin: 3px;
+  display: inline-block;
+}
+
+input[type="radio"]:before {
+  width: 20px;
+  height: 20px;
+  border-radius: 0px;
+  top: -5px;
+  left: -5px;
+  position: relative;
+  background-color: white;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #000;
+}
+
+input[type="radio"]:checked:after {
+  width: 16px;
+  height: 16px;
+  border-radius: 0px;
+  top: -30px;
+  left: -3px;
+  position: relative;
+  background-color: #000;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+label {
+  /* margin-left: 10px; */
+  /* margin-right: 8px; */
+  position: relative;
+  top: -15px;
+  /* height: 3.7vmin; */
+  text-align: left;
+  /* vertical-align; */
+  font-size: 35px;
+  padding: 1%;
+}
+
+@media only screen and (max-width: 780px) {
+  /* button {
+    font-size: 24px;
+    padding: 5px 15px 10px 15px;
+  }
+  button:active {
+    padding: 5px 15px 10px 15px;
+  } */
+  label {
+    font-size: 18px;
+    margin-top: 5%;
+  }
+  .longtext {
+    width: 90%;
+  }
+  .longtext textarea {
+    width: 90%;
+  }
+  label {
+    /* margin-left: 10px; */
+    /* margin-right: 8px; */
+    position: relative;
+    top: -5px;
+  }
+}

@@ -1,0 +1,310 @@
+.summaryBlock-Book {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-family: Asap;
+}
+
+.summaryTop-Book {
+  width: calc(100% - 10px);
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-Book {
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  margin-right: 5px;
+}
+
+.galleryDetail-Book {
+  width: calc(40% - 10px);
+  max-width: 250px;
+  min-width: 200px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.galleryDetail-Book p {
+  padding: 5px;
+}
+
+.galleryTitle-Book {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.galleryPrice-Book {
+  font-weight: 600;
+  color: #fdc700;
+  font-size: 1rem;
+}
+
+.galleryAbout-Book {
+  border: 2px solid #fdc700;
+  text-align: left;
+  font-size: 0.9rem;
+  margin: 5px 0px;
+}
+.galleryAge-Book p {
+  font-size: 0.3rem;
+}
+.galleryMsg-Book {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+.summaryBottom-Book {
+  width: calc(100% - 10px);
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.summaryInput-Book {
+  /*width: 180px;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  font-size: 0.8rem;
+  margin-right: 15px;
+  flex-wrap: wrap;
+  font-family: "Patrick Hand";
+  font-size: 20px;
+}
+
+.summaryInput-Book .inputs {
+  outline: none;
+  width: 140px;
+  border: 2px solid #fdc700;
+  font-size: 18px;
+  text-align: center;
+  margin: 5px 0px;
+}
+.customSelect {
+  width: 100%;
+  border-width: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5vw;
+  background-color: #fdc700;
+  color: #ffffff;
+  font-size: 3vw !important;
+  margin-bottom: 0.6rem !important;
+  box-shadow: 0px 5px 8px 0px #666;
+  border-radius: 0.2em;
+  /* height: 8vh !important; */
+}
+
+.book-flip {
+  display: flex;
+  justify-content: center;
+  width: 98%;
+  height: 85%;
+  margin-left: 5px;
+  background-color: aliceblue;
+  border: 0 !important;
+}
+.book-characters {
+  width: 50%;
+  /* margin-left: 25%; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* flex-direction: column; */
+}
+.book-characters img {
+  cursor: pointer;
+  /* position: relative;
+  left: -44%; */
+  width: 50px;
+  height: 50px;
+  /* zoom: 1; */
+}
+.book-characters img:hover {
+  border: 1px solid #000;
+}
+
+.popUpDiv {
+  z-index: 1200;
+  position: fixed;
+  top: 25%;
+  border-radius: 4px;
+  width: 50%;
+  padding: 1%;
+  background: white;
+  border: 1px solid rgb(163, 163, 163);
+  box-shadow: 0.1rem 0.5rem 0.9rem 0.5rem #dadada;
+  left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popUpDiv p {
+  font-size: 18px;
+  font-weight: 500;
+  /* margin-top: 30px; */
+}
+.thumbnail {
+  display: flex;
+  width: 10rem;
+}
+.formRow {
+  border-top: 1rem solid #fdc700;
+  border-bottom: 1rem solid #fdc700;
+}
+.formCol {
+  padding: 1rem;
+}
+.custom {
+  border: 0 !important;
+  border-bottom: 0.1rem solid rgb(49, 49, 49) !important;
+  margin-top: 1rem !important;
+  color: rgb(49, 49, 49) !important;
+  font-size: xx-large !important;
+  /* font-size: 1.2em; */
+  /* font-style: bold; */
+}
+.custom ::-webkit-input-placeholder::before {
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif !important; */
+  /* font-size: smaller !important; */
+  /* height: 100% !important; */
+  border: 0 !important;
+  color: rgb(49, 49, 49) !important;
+}
+
+.formBtn {
+  background-color: #fdc700 !important;
+  border: 0 !important;
+  /* height: 3.3rem !important; */
+  font-size: 1vw !important;
+  font-weight: bolder;
+  color: #ffffff;
+  margin-bottom: 2rem !important;
+  box-shadow: 0px 5px 8px 0px #666;
+}
+.formBtn2 {
+  background-color: #4bbcc0 !important;
+  border: 0 !important;
+  font-size: 1.7rem !important;
+  margin-bottom: 1.5rem !important;
+  box-shadow: 0px 5px 8px 0px #666;
+}
+.formBtn :active {
+  border: 0px !important;
+}
+.Cborder {
+  border: 5px solid #fdc700;
+  /* font-size: 1vw; */
+}
+.modalbtn {
+  width: 95% !important;
+}
+.BtnC2 {
+  font-size: 2.8rem !important;
+  padding-top: 0 !important;
+  height: 4rem !important;
+}
+.btnC {
+  background-color: #fdc700 !important;
+  border: 0 !important;
+  width: 100%;
+  font-size: 3vw !important;
+  text-align: center;
+  align-items: center;
+  color: #ffffff;
+  margin-bottom: 2rem !important;
+  box-shadow: 0px 5px 8px 0px #666;
+  border-radius: 0.5vw;
+}
+@media only screen and (max-width: 768px) {
+  .BtnC2 {
+    /* font-size: 30px !important; */
+    height: 3.5rem !important;
+    width: 100%;
+  }
+  .formBtn {
+    /* font-size: 0rem !important; */
+    width: 100% !important;
+  }
+  .customSelect {
+    width: 100%;
+    /* font-size: xx-large !important; */
+    /* padding-top: 1vh !important; */
+  }
+  .popUpDiv {
+    position: fixed;
+    top: 15%;
+    height: 80%;
+    width: 90%;
+    left: 5%;
+  }
+  .book-flip {
+    height: 10% !important;
+    background-color: #4bbcc0;
+  }
+  .btnC {
+    width: 97% !important;
+  }
+  .book-characters {
+    width: 60%;
+    /* margin-left: 25%; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* flex-direction: column; */
+    display: block;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .book-characters img {
+    cursor: pointer;
+    position: relative;
+    left: -44%;
+    width: 70px;
+    height: 70px;
+    zoom: 1;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  .Cborder {
+    font-size: 1vw;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .BtnC2 {
+    font-size: 28px !important;
+    height: 3.3rem !important;
+    padding: 0.5rem !important;
+    width: 100%;
+  }
+  .customSelect {
+    font-size: 30px !important;
+    height: 3.3rem !important;
+    /* padding-top: 1vh !important; */
+    width: 100%;
+  }
+  .btnC {
+    width: 100%;
+  }
+}
