@@ -125,26 +125,26 @@ export const Guided = () => {
         <Row className="textRow" style={{ paddingHorizontal: 20 }}>
           <Col
             md={4}
-            className="mx-auto d-flex justify-content-center justify-content-xs-center end align-items-center mb-2"
+            className="mx-auto d-flex justify-content-center justify-content-xs-center end align-items-center my-5"
           >
             <Image fluid src={NAW} />
           </Col>
           <Col
             md={4}
-            className="d-flex justify-content-center align-items-center mb-2"
+            className="d-flex justify-content-center align-items-center my-5"
           >
             <Image fluid src={WN} />
           </Col>
           <Col
             md={4}
-            className="d-flex justify-content-center align-items-center mb-5"
+            className="d-flex justify-content-center align-items-center my-5"
           >
             <Image fluid src={WH} />
           </Col>
         </Row>
       </section>
       <section>
-        <Row className="mx-auto mt-4  my-row">
+        <Row className="mx-auto mt-5  my-row">
           <Col md={4} className="mb-3">
             {" "}
             <Form.Control
