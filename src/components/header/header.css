@@ -1,24 +1,26 @@
 .header-holder {
-  width: 41.3%;
+  width: 37.3%;
   height: 10%;
-  border: 5px solid #fdc700;
+  border: 0.4vw solid #fdc700;
   margin: 0 !important;
   border-bottom: 0;
   float: right;
   margin-left: 55% !important;
+  padding: 1vw;
   /* padding: 2%; */
 }
 .header-holderBottom {
-  width: 41.3%;
+  width: 37.3%;
   height: 10%;
-  border: 5px solid #fdc700;
+  border: 0.4vw solid #fdc700;
   margin: 0 !important;
   border-top: 0;
   float: right;
   margin-left: 55% !important;
+  /* padding: 1vw; */
 }
 .centerel {
-  width: 96.3%;
+  width: 92.3%;
   height: 10%;
   display: flex;
   align-items: center;
@@ -36,8 +38,8 @@
   /* color: black; */
   font-size: 1.2vw;
   border: 0px solid #999;
-  border-radius: 5px;
-  box-shadow: 0px 8px 3px #999;
+  border-radius: 0.3vw;
+  box-shadow: 0px 0.6vh 3px #999;
   background-color: #4bbcc0;
   color: white;
   margin-top: 0 !important;
@@ -45,7 +47,7 @@
 }
 .discover:active {
   margin-top: 2px !important;
-  border: 0 !important;
+  border: 0px solid #fff !important;
 }
 
 .arrow {
@@ -53,27 +55,24 @@
   top: -15px;
   left: 15px;
 }
-.discoverbtn:active {
-  text-decoration: none !important;
-  border: 0 !important;
+.discover:hover {
+  box-shadow: 0px 0px 0px;
 }
 
-.discoverbtn:focus {
-  text-decoration: none !important;
-  border: 0 !important;
-}
 .btnc {
   background-color: white;
   width: 6rem !important;
   border: 0px !important;
-  border-radius: 5px !important;
+  border-radius: 0.3vw !important;
   box-shadow: 0px 8px 10px #555;
   /* font-size: small !important; */
   margin: 2%;
   font-weight: bold !important;
   padding: 1%;
 }
-
+.btnc:hover {
+  box-shadow: 0px 0px 0px !important;
+}
 .bookel {
   width: 200px;
 }
@@ -86,31 +85,36 @@
 }
 .centerElements {
   margin-top: 1%;
-  width: 20vw;
+  width: 19vw;
   padding: 1vw;
-  margin-left: -1.5%;
+  margin-left: -1.9%;
 }
 .btnwrap {
-  width: 100% !important;
+  width: 90% !important;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  /* margin-left: 2% !important; */
+  align-items: center;
+  margin-left: 4% !important;
 }
 .cTitle {
-  width: 80% !important;
-  margin-left: 8% !important;
+  width: 75% !important;
+  margin-left: 10% !important;
 }
 @media only screen and (max-width: 768px) {
   .header-holder {
     margin-left: 20% !important;
     width: 60%;
     padding: 3% !important;
+    border: 1vw solid #fdc700;
+    border-bottom: 0;
   }
   .header-holderBottom {
     margin-left: 20% !important;
     width: 60%;
-    padding: 3% !important;
+    /* padding: 3% !important; */
+
+    border: 1vw solid #fdc700;
+    border-top: 0;
   }
   .centerel {
     width: 100%;
@@ -123,7 +127,7 @@
   .centerElements {
     margin-top: 1%;
     /* margin-right: auto !important; */
-    padding-left: -2%;
+    margin-left: 0%;
     width: 45vw;
   }
   .discover {
@@ -199,6 +203,7 @@
     /* width: 30% !important; */
     /* height: 1.2rem !important; */
   }
+
   .bookel {
     width: 5rem !important;
   }
@@ -235,7 +240,7 @@
     align-items: flex-end;
     margin-top: 1%;
     width: 20vw;
-    margin-left: auto !important;
+    margin-left: 3vmax !important;
   }
   .bgImg {
     width: 20vw !important;
@@ -244,5 +249,10 @@
     font-size: 1.2vw !important;
     width: 7vw !important;
     /* height: 1.2rem !important; */
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .centerElements {
+    margin-left: 7vmax !important;
   }
 }

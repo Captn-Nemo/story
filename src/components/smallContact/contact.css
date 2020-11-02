@@ -1,9 +1,12 @@
 .btnCy {
-  font-size: 2.4rem !important;
+  font-size: 2.4vmax !important;
   width: 30% !important;
 }
 
 @media only screen and (max-width: 768px) {
+  .cDiv {
+    /* width: 90vw; */
+  }
   .font {
     font-size: medium !important;
   }

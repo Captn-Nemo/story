@@ -15,6 +15,8 @@ const Doodlebar = require("../../assets/images/doodlesBar.svg");
 const NAW = require("../../assets/images/NAW.png");
 const WN = require("../../assets/images/WN.png");
 const WH = require("../../assets/images/wecanhelp.png");
+const margins = { marginBottom: "2%" };
+const marginTB = { marginBottom: "4%", marginTop: "4%" };
 const clearState = {
   name: "",
   email: "",
@@ -67,23 +69,26 @@ export const Guided = () => {
       <section className="mt-2">
         <Row>
           <Col className="d-flex flex-row-reverse align-items-center">
-            <img src={arrow} height="70%" className="pen rotate" />
+            <Image src={arrow} fluid width="15%" className="pen rotate" />
           </Col>
           <Col className="d-flex justify-content-center align-items-center">
-            <h1 className="text-center style amatic f24 teal font-weight-bold">
+            <h1 className="text-center style amatic ftitle teal font-weight-bold">
               GUIDED
             </h1>
           </Col>
           <Col className="d-flex align-items-center">
-            <img src={arrow} height="70%" className=" brush pen" />
+            <Image src={arrow} fluid width="15%" className="brush pen" />
           </Col>
         </Row>
         <Row>
-          <Col className="bg-warning d-flex flex-column px-5">
-            <h2 className="chelsea f14a white text-white text-center">
+          <Col
+            className="bg-warning d-flex flex-column"
+            style={{ marginTop: "1%", marginBottom: "1%", padding: "2%" }}
+          >
+            <h2 className="chelsea f111 white text-white text-center">
               Instructions:
             </h2>
-            <h6 className="chelsea f14a white text-white text-center">
+            <h6 className="chelsea f1 white text-white text-center">
               Share the real ‘you’ with your loved ones through authentic
               stories from your life, culture and heritage. The process of
               writing your own story is super fun and simple. All you have to do
@@ -92,26 +97,26 @@ export const Guided = () => {
 
             <div className="mx-auto ins">
               <ul className="font-weight-bold mx-auto">
-                <li>
+                <li className="f1">
                   Step 1- Select your audience- To whom would you like to
                   narrate this story?
                 </li>
-                <li>
+                <li className="f1">
                   Step 2- Select the genre- What would you like to narrate?
                 </li>
-                <li>
+                <li className="f1">
                   Step 3- Answer the questions and start writing your story.
                 </li>
-                <li>
+                <li className="f1">
                   Step 4- Once you are done, click on the review button to go
                   over what you have typed. If everything seems good, then
                   simply click on the submit button.
                 </li>
-                <li>
+                <li className="f1">
                   Step 5- Sit back and relax, while we do our magic and create a
                   personalized book for you.
                 </li>
-                <li>
+                <li className="f1">
                   This process can take 5-10 working days. We will be in touch
                   with you and in case if we need some information, we will
                   contact you.
@@ -121,31 +126,31 @@ export const Guided = () => {
           </Col>
         </Row>
       </section>
-      <section className="mt-4">
+      <section style={{ marginBottom: "2%" }}>
         <Row className="textRow" style={{ paddingHorizontal: 20 }}>
           <Col
-            md={4}
+            lg={4}
             className="mx-auto d-flex justify-content-center justify-content-xs-center end align-items-center my-5"
           >
-            <Image fluid src={NAW} />
+            <Image fluid src={NAW} width="50%" />
           </Col>
           <Col
-            md={4}
+            lg={4}
             className="d-flex justify-content-center align-items-center my-5"
           >
-            <Image fluid src={WN} />
+            <Image fluid src={WN} width="50%" />
           </Col>
           <Col
-            md={4}
+            lg={4}
             className="d-flex justify-content-center align-items-center my-5"
           >
-            <Image fluid src={WH} />
+            <Image fluid src={WH} width="70%" />
           </Col>
         </Row>
       </section>
       <section>
         <Row className="mx-auto mt-5  my-row">
-          <Col md={4} className="mb-3">
+          <Col lg={4} className="mb-3">
             {" "}
             <Form.Control
               type="text"
@@ -153,11 +158,11 @@ export const Guided = () => {
               name="name"
               required
               value={form.name}
-              className="amatic guidedInput "
+              className="amatic guidedInput"
               onChange={(e) => inputHandler(e)}
             />{" "}
           </Col>
-          <Col md={8} className="mb-3">
+          <Col lg={8} className="mb-3">
             {" "}
             <Form.Control
               type="text"
@@ -166,17 +171,21 @@ export const Guided = () => {
               required
               value={form.email}
               placeholder="EMAIL"
-              className="amatic guidedInput "
+              className="amatic guidedInput f2 "
             />{" "}
           </Col>
 
           <Col
-            md={6}
+            style={{ marginBottom: "3%", marginTop: "3%" }}
+            lg={6}
             sm={12}
-            className="d-flex justify-content-center align-items-center mb-2"
+            className="d-flex justify-content-center align-items-center"
           >
-            <div className="box bg-warning">
-              <h5 className="amatic text-white f17a text-center">
+            <div
+              style={{ padding: "2%" }}
+              className="box bg-warning d-flex justify-content-center align-items-center "
+            >
+              <h5 className="amatic text-white f33 text-justify">
                 WHO IS THE STORY FOR
               </h5>
             </div>
@@ -214,12 +223,12 @@ export const Guided = () => {
             </div>
           </Col>
           <Col
-            md={6}
+            lg={6}
             sm={12}
             className="d-flex justify-content-center align-items-center mb-2 mx-auto"
           >
             <div className="box bg-info">
-              <h5 className="amatic text-white f17a text-center">
+              <h5 className="amatic text-white f3 text-center">
                 WHAT WOULD YOU LIKE TO NARRATE
               </h5>
             </div>
@@ -263,7 +272,8 @@ export const Guided = () => {
           <Row>
             <Col
               id="q4"
-              md={12}
+              style={margins}
+              lg={12}
               className="d-flex justify-content-center flex-column align-items-center"
             >
               <CustomButton
@@ -272,7 +282,7 @@ export const Guided = () => {
                 onClick={() => setTabs({ tab4: !tabs.tab4 })}
                 block
                 orange
-                className="amatic font"
+                className="amatic font f2"
               >
                 WHEN DID IT HAPPEN ?
               </CustomButton>
@@ -286,22 +296,28 @@ export const Guided = () => {
                     value={form.when}
                     onChange={(e) => inputHandler(e)}
                   />
-                  <CustomButton
-                    className="amatic d-flex justify-content-center align-items-center my-2"
-                    onClick={() => {
-                      setTabs(!tabs.tab4);
-                      setTabs({ tab5: true });
-                      scrollToRef("q5");
-                    }}
+                  <Col
+                    style={{ marginTop: "2%" }}
+                    className="d-flex justify-content-center align-items-center"
                   >
-                    Next
-                  </CustomButton>
+                    <CustomButton
+                      className="amatic d-flex justify-content-center align-items-center my-2 nextBtn"
+                      onClick={() => {
+                        setTabs(!tabs.tab4);
+                        setTabs({ tab5: true });
+                        scrollToRef("q5");
+                      }}
+                    >
+                      Next
+                    </CustomButton>
+                  </Col>
                 </div>
               </Collapse>
             </Col>
             <Col
+              style={margins}
               id="q5"
-              md={12}
+              lg={12}
               className="d-flex justify-content-center flex-column align-items-center"
             >
               <CustomButton
@@ -310,7 +326,7 @@ export const Guided = () => {
                 onClick={() => setTabs({ tab5: !tabs.tab5 })}
                 block
                 orange
-                className="amatic tint font"
+                className="amatic tint font f2"
               >
                 WHAT HAPPENED
               </CustomButton>
@@ -324,22 +340,28 @@ export const Guided = () => {
                     value={form.what}
                     onChange={(e) => inputHandler(e)}
                   />
-                  <CustomButton
-                    className="amatic d-flex justify-content-center align-items-center my-2"
-                    onClick={() => {
-                      setTabs(!tabs.tab5);
-                      setTabs({ tab6: true });
-                      scrollToRef("q6");
-                    }}
+                  <Col
+                    style={{ marginTop: "2%" }}
+                    className="d-flex justify-content-center align-items-center"
                   >
-                    Next
-                  </CustomButton>
+                    <CustomButton
+                      className="amatic d-flex justify-content-center align-items-center my-2 nextBtn"
+                      onClick={() => {
+                        setTabs(!tabs.tab5);
+                        setTabs({ tab6: true });
+                        scrollToRef("q6");
+                      }}
+                    >
+                      Next
+                    </CustomButton>
+                  </Col>
                 </div>
               </Collapse>
             </Col>
             <Col
               id="q6"
-              md={12}
+              style={margins}
+              lg={12}
               className="d-flex justify-content-center flex-column align-items-center"
             >
               <CustomButton
@@ -348,7 +370,7 @@ export const Guided = () => {
                 onClick={() => setTabs({ tab6: !tabs.tab6 })}
                 block
                 orange
-                className="amatic bgmagenta font"
+                className="amatic bgmagenta font f2"
               >
                 WHY IT IS IMPORTANT FOR YOU
               </CustomButton>
@@ -362,22 +384,28 @@ export const Guided = () => {
                     value={form.why}
                     onChange={(e) => inputHandler(e)}
                   />
-                  <CustomButton
-                    className="amatic d-flex justify-content-center align-items-center my-2"
-                    onClick={() => {
-                      setTabs(!tabs.tab6);
-                      setTabs({ tab7: true });
-                      scrollToRef("q7");
-                    }}
+                  <Col
+                    style={{ marginTop: "2%" }}
+                    className="d-flex justify-content-center align-items-center"
                   >
-                    Next
-                  </CustomButton>
+                    <CustomButton
+                      className="amatic d-flex justify-content-center align-items-center my-2 nextBtn"
+                      onClick={() => {
+                        setTabs(!tabs.tab6);
+                        setTabs({ tab7: true });
+                        scrollToRef("q7");
+                      }}
+                    >
+                      Next
+                    </CustomButton>
+                  </Col>
                 </div>
               </Collapse>
             </Col>
             <Col
               id="q7"
-              md={12}
+              style={margins}
+              lg={12}
               className="d-flex justify-content-center flex-column align-items-center"
             >
               <CustomButton
@@ -386,7 +414,7 @@ export const Guided = () => {
                 onClick={() => setTabs({ tab7: !tabs.tab7 })}
                 block
                 orange
-                className="amatic rose font"
+                className="amatic rose font f2"
               >
                 DO YOU WANT TO ADD MORE ?
               </CustomButton>
@@ -400,15 +428,20 @@ export const Guided = () => {
                     value={form.more}
                     onChange={(e) => inputHandler(e)}
                   />
-                  <CustomButton
-                    className="amatic d-flex justify-content-center align-items-center my-2"
-                    onClick={() => {
-                      setTabs(!tabs.tab7);
-                      // setTabs({ tab7: true });
-                    }}
+                  <Col
+                    style={{ marginTop: "2%" }}
+                    className="d-flex justify-content-center align-items-center"
                   >
-                    Next
-                  </CustomButton>
+                    <CustomButton
+                      className="amatic d-flex justify-content-center align-items-center my-2 nextBtn"
+                      onClick={() => {
+                        setTabs(!tabs.tab7);
+                        // setTabs({ tab7: true });
+                      }}
+                    >
+                      Next
+                    </CustomButton>
+                  </Col>
                 </div>
               </Collapse>
             </Col>
@@ -418,29 +451,29 @@ export const Guided = () => {
       <section>
         <Row className="submitRow mx-auto d-flex  justify-content-around align-items-center">
           <Col
-            md={6}
+            lg={6}
             // style={{ width: "80%" }}
             className="mx-auto d-flex justify-content-center align-items-center"
           >
             <CustomButton
               yellow
               block
-              className="amatic submit font"
+              className="amatic submit font f2"
               onClick={() => setForm(clearState)}
             >
               RESET
             </CustomButton>
           </Col>
           <Col
-            md={6}
+            lg={6}
             // style={{ width: "80%" }}
             className="mx-auto d-flex justify-content-center align-items-center"
           >
             <CustomButton
               block
               teal
-              type="submit"
-              className="amatic submit font bgteal"
+              // type="submit"
+              className="amatic submit font f2"
               onClick={() => submitForm()}
             >
               SUBMIT
@@ -448,10 +481,10 @@ export const Guided = () => {
           </Col>
         </Row>
       </section>
-      <section className="mt-3">
+      <section style={marginTB}>
         <Row>
           <Col
-            md={12}
+            lg={12}
             className="my-3 mx-auto d-flex justify-content-center align-items-center "
           >
             <Image
@@ -466,20 +499,20 @@ export const Guided = () => {
           </Col>
         </Row>
       </section>
-      <section className="m-2">
+      <section style={marginTB}>
         <Row className="mx-auto d-flex justify-content-center align-items-center">
           <Col
-            md={{ span: 10, offset: 2 }}
-            sm={{ span: 12, span: 3 }}
-            className="d-flex justify-content-sm-center justify-content-xs-center align-items-sm-center"
+            lg={{ span: 10, offset: 2 }}
+            sm={{ span: 12, offset: 0 }}
+            className="d-sm-flex justify-content-sm-center justify-content-xs-center align-items-sm-center"
           >
-            <div className="my-auto ml-3 contactDiv">
+            <div className="my-auto contactDiv">
               <ContactFragment />
             </div>
             <Image
               src={girl}
               width="40%"
-              className="d-none d-md-block d-lg-block d-xl-block"
+              className="d-none d-lg-block d-lg-block d-xl-block"
             />
           </Col>
         </Row>

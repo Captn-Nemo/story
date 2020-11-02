@@ -3,15 +3,16 @@ import "./forms.css";
 import Button from "./button";
 import { Row, Col } from "react-bootstrap";
 
-const Form = (props) => {
+const AreaForm = (props) => {
   return (
     <Row className="align-items-center">
       <Col>
         <div className="formlongtext">
           <div className="longtext">
             <textarea
-              className="patrickhand"
-              defaultValue="Please type your story here.."
+              {...props}
+              className="patrickhand f2"
+              placeholder="Please type your story here.."
             />
           </div>
           {/* <div className="submission">
@@ -23,4 +24,4 @@ const Form = (props) => {
   );
 };
 
-export default Form;
+export default AreaForm;

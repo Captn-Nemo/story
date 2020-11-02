@@ -1,67 +1,74 @@
-.inputForm{
+.inputForm {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   min-height: 80px;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   display: flex;
-  position: relative;
+  /* position: relative; */
+  /* background-color: red; */
+  padding: 5%;
 }
 
-.inputForm img{
+.inputForm img {
   display: inline-block;
   position: absolute;
-  height:50px;
+  height: 50px;
   width: 50px;
-  top:0;
+  top: 0;
   transform: rotate(-10deg);
 }
 
-.inputText{
-  height:40px;
-  width:70vw;
+.inputText {
+  height: 10vmax;
+  width: 60vw;
   background-color: transparent;
   border: transparent;
   background-repeat: no-repeat;
-  font-family: 'patrick_handregular';
+  font-family: "patrick_handregular";
   font-size: 1.2rem;
   outline: none !important;
   padding-left: 4vw;
   padding-right: 4vw;
 }
 
-.inputText[type='text']{
+.inputText[type="text"] {
   text-align: center;
 }
 
-.teal-b{
+.teal-b {
   border-color: #4bbcc0ff;
 }
 
-.teal-s{
+.teal-s {
   box-shadow: 0px 4px 2px #4bbcc0ff;
 }
 
-.orange-b{
+.orange-b {
   border-color: #fa8807ff;
 }
 
-.orange-s{
+.orange-s {
   box-shadow: 0px 4px 2px #fa8807ff;
 }
 
-.yellow-b{
+.yellow-b {
   border-color: #fdc700ff;
 }
 
-.yellow-s{
+.yellow-s {
   box-shadow: 0px 4px 2px #fdc700ff;
 }
 
-.purple-b{
+.purple-b {
   border-color: #804cbfff;
 }
 
-.purple-s{
+.purple-s {
   box-shadow: 0px 4px 2px #804cbfff;
+}
+@media only screen and (max-width: 768px) {
+  .inputText {
+    font-size: 0.5rem;
+  }
 }

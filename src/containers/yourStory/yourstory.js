@@ -10,24 +10,30 @@ export const YourStory = () => {
   return (
     <>
       <Col
-        md={{ span: 8, offset: 1 }}
-        className="d-flex flex-row justify-content-between align-items-center mt-5"
+        lg={{ span: 8, offset: 1 }}
+        md={12}
+        className="d-flex flex-row justify-content-between align-items-center mt-5 imageCol"
       >
-        <Image src={spaceShip} className="mt-5 ship" width="15%" />
-        <Image src={title} className="title mx-auto" />
+        <Image
+          src={spaceShip}
+          className="mt-5 ship d-none d-lg-block"
+          width="15%"
+        />
+        <Image src={title} className="title mx-auto" width="65%" />
       </Col>
       <Col md={12}>
-        <Row className="mt-1">
+        <Row className="mt-1 py-4">
           <Col
-            md={{ span: 5, offset: 1 }}
+            lg={{ span: 5, offset: 1 }}
             sm={12}
-            className="d-flex justify-content-end"
+            md={12}
+            className="d-flex justify-content-end align-items-end"
           >
-            <Card className="leftBox my-5 pt-2">
-              <span className="chelsea f17 orange">WRITE YOUR</span>
+            <Card className="leftBox pt-2">
+              <span className="chelsea f3 orange">WRITE YOUR</span>
               <span
-                className="chelsea f17 orange"
-                style={{ position: "relative", top: "-5%" }}
+                className="chelsea f3 orange"
+                // style={{ position: "relative", top: "-5%" }}
               >
                 OWN
               </span>
@@ -60,17 +66,28 @@ export const YourStory = () => {
               </Card.Body>
             </Card>
           </Col>
-          <Col md={{ span: 5, offset: 0 }} sm={12}>
-            <Image src={girlhead} fluid className="girl" />
+          <Col
+            lg={5}
+            sm={12}
+            md={12}
+            className="d-flex justify-content-start align-items-end"
+          >
+            <Image
+              src={girlhead}
+              fluid
+              className="girl"
+              width="30%"
+              style={{ position: "absolute", top: "-1%", left: "20%" }}
+            />
             <Card className="rightBox pt-2">
-              <span className="chelsea f17 purple">BROWSE</span>
+              <span className="chelsea f3 purple">BROWSE</span>
               <span
-                style={{ position: "absolute", top: "13%" }}
-                className="chelsea f17 purple"
+                // style={{ position: "absolute", top: "10vh" }}
+                className="chelsea f3 purple"
               >
                 TEMPLATES
               </span>
-              <Card.Body className="mt-5" style={{ width: "90%" }}>
+              <Card.Body className="" style={{ width: "90%" }}>
                 <FormButton
                   title="FOR GROWN UP'S"
                   className="fBtn"

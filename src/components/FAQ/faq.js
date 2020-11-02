@@ -40,9 +40,9 @@ const FAQdata = [
 
 const Question = ({ data }) => {
   return (
-    <div className="px-5">
-      <p className="asapbold p-0">{data.qn}</p>
-      <p className="asapbold f10 text-muted">{data.ans}</p>
+    <div className="" style={{ marginBottom: "2%", paddingLeft: "5%" }}>
+      <p className="asapbold p-0 f111 color">{data.qn}</p>
+      <p className="asap text-muted f1">{data.ans}</p>
     </div>
   );
 };
@@ -55,7 +55,7 @@ export const FAQ = () => {
           md={12}
           className="d-flex justify-content-center align-items-center mb-5"
         >
-          <h6 className="chelsea teal f15 text-center">
+          <h6 className="chelsea teal f2 text-center">
             FAQ ABOUT YOU GO BACK TO SCHOOL{" "}
           </h6>
         </Col>

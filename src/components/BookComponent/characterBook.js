@@ -6,9 +6,14 @@ import "./summaryBook.css";
 export default (props) => (
   <Popup
     trigger={
-      <button className="btnC amatic" {...props} style={{ margin: "5px" }}>
+      <Button
+        size="lg"
+        className="btnC amatic bgyellow"
+        {...props}
+        style={{ margin: "5px", backgroundColor: "#fdc700" }}
+      >
         {props.kid}
-      </button>
+      </Button>
     }
     position="top center"
     on="hover"

@@ -3,45 +3,47 @@ import { Col, Image, Row, NavDropdown, Navbar, Nav } from "react-bootstrap";
 import { CustomNavLink } from "../components/NavItem/NavItem";
 import "./style.css";
 const footerImg = require("./../assets/images/footer.png");
+const footerImg2 = require("./../assets/images/footer1.png");
 export const Footer = () => {
   return (
-    <Row className="bg-warning p-5">
-      <Col md={4} className="d-flex justify-content-center align-items-start">
-        <div className="descDiv d-flex flex-column">
-          <h6
-            className="amatic f14 text-white text-justify"
-            style={{ fontSize: 30 }}
-          >
-            STORICALLY
-          </h6>
-          <p className="asapbold f11">
+    <Row className="bg-warning footerRow">
+      <Col
+        lg={3}
+        style={{ marginBottom: "4%" }}
+        className="d-lg-flex justify-content-lg-center align-items-lg-start d-md-flex justify-content-md-center align-items-md-center"
+      >
+        <div className=" d-flex flex-column justify-content-center align-items-center  d-lg-flex flex-lg-column  justify-content-lg-center align-items-lg-start d-sm-flex flex-sm-column  justify-content-sm-center align-items-sm-center d-xs-flex flex-xs-column  justify-content-xs-center align-items-xs-center">
+          <h6 className="amatic text-white f2">STORICALLY</h6>
+          <p className="asapbold text-justify f1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
             ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
             accumsan lacus vel facilisis.
           </p>
           <div className="d-flex justify-centent-around align-items-start">
-            <a class="fa fa-instagram" title="" target="_blank" href="#"></a>
+            <a
+              style={{ marginRight: "10%" }}
+              class="fa fa-instagram"
+              title=""
+              target="_blank"
+              href="#"
+            ></a>
             <a class="fa fa-facebook" title="" target="_blank" href="#"></a>
           </div>
         </div>
       </Col>
       <Col
-        md={4}
-        className="d-md-flex justify-content-md-center align-items-md-start d-sm-flex justify-content-sm-start align-items-sm-start"
+        lg={3}
+        style={{ marginBottom: "4%" }}
+        className="d-flex justify-content-center align-items-start"
       >
-        <div className="descDiv d-flex flex-column">
-          <h6
-            className="amatic f14 text-white text-justify"
-            style={{ fontSize: 30 }}
-          >
-            LINKS
-          </h6>
+        <div className="d-flex flex-column">
+          <h6 className="amatic f2 text-white text-justify">LINKS</h6>
           <Nav bsPrefix="p-0" className="d-block p-0 m-0">
-            <Nav.Link href="#3" className="Bottomnavitem">
+            <Nav.Link href="#3" className="Bottomnavitem f1">
               <CustomNavLink
                 to="/projects/storically"
-                className="Bottomnavitem"
+                className="Bottomnavitem f1"
               >
                 Home
               </CustomNavLink>
@@ -51,7 +53,7 @@ export const Footer = () => {
               id="basic-nav-dropdownBottom"
               className="Bottomnavitem"
             >
-              <NavDropdown.Item href="#3" className="BottomnavitemDrop">
+              <NavDropdown.Item href="#3" className="Bottomnavitelgrop">
                 <CustomNavLink
                   to="/projects/storically/yourown/guided"
                   className="Bottomnavitem"
@@ -59,7 +61,7 @@ export const Footer = () => {
                   Guided
                 </CustomNavLink>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#1" className="BottomnavitemDrop">
+              <NavDropdown.Item href="#1" className="Bottomnavitelgrop">
                 <CustomNavLink
                   to="/projects/storically/yourown"
                   className="Bottomnavitem"
@@ -67,7 +69,7 @@ export const Footer = () => {
                   Type in Long Form
                 </CustomNavLink>
               </NavDropdown.Item>
-              <NavDropdown.Item href="#2" className="BottomnavitemDrop">
+              <NavDropdown.Item href="#2" className="Bottomnavitelgrop">
                 <CustomNavLink
                   to="/projects/storically/"
                   className="Bottomnavitem"
@@ -134,8 +136,23 @@ export const Footer = () => {
           </Nav>
         </div>
       </Col>
-      <Col md={4} className="d-flex justify-content-end align-items-center">
-        <Image src={footerImg} fluid />
+      <Col
+        lg={3}
+        md={6}
+        sm={12}
+        style={{ marginBottom: "4%" }}
+        className="d-flex justify-content-center align-items-center"
+      >
+        <Image src={footerImg2} fluid width="60%" />
+      </Col>
+      <Col
+        style={{ marginBottom: "4%" }}
+        lg={3}
+        md={6}
+        sm={12}
+        className="d-flex justify-content-center align-items-center"
+      >
+        <Image src={footerImg} fluid width="60%" />
       </Col>
     </Row>
   );

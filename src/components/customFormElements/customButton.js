@@ -6,6 +6,7 @@ export const CustomButton = (props) => {
   return (
     <Button
       {...props}
+      size="lg"
       className={
         props.teal
           ? `formBtn2 ${props.className}`

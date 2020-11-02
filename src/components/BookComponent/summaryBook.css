@@ -57,7 +57,7 @@
   font-size: 0.3rem;
 }
 .galleryMsg-Book {
-  font-size: 0.9rem;
+  font-size: 1vmax;
   font-weight: 500;
   padding: 0;
   margin: 0;
@@ -93,21 +93,17 @@
   margin: 5px 0px;
 }
 .customSelect {
-  width: 100%;
   border-width: 0 !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5vw;
-  background-color: #fdc700;
-  color: #ffffff;
-  font-size: 3vw !important;
-  margin-bottom: 0.6rem !important;
+  background-color: #fdc700 !important;
+  color: #ffffff !important;
+  padding: 0 !important;
+  font-size: 2.2vw !important;
   box-shadow: 0px 5px 8px 0px #666;
-  border-radius: 0.2em;
-  /* height: 8vh !important; */
+  border-radius: 0.3em !important;
 }
-
+.checkLabel {
+  font-size: 0.1vw !important;
+}
 .book-flip {
   display: flex;
   justify-content: center;
@@ -118,20 +114,26 @@
   border: 0 !important;
 }
 .book-characters {
-  width: 50%;
+  width: 53%;
   /* margin-left: 25%; */
+  background-color: #fff;
+  border: 1px solid #f4f5f5;
+  position: relative;
+  /* box-shadow: 0.1rem 0.5rem 0.9rem 0.5rem #dadada; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  border: 1px solid #f4f5f5;
   /* flex-direction: column; */
 }
 .book-characters img {
   cursor: pointer;
   /* position: relative;
   left: -44%; */
-  width: 50px;
-  height: 50px;
+  width: 3vw;
+  height: 3vw;
+  /* margin-bottom: 10vh; */
   /* zoom: 1; */
 }
 .book-characters img:hover {
@@ -143,19 +145,19 @@
   position: fixed;
   top: 25%;
   border-radius: 4px;
-  width: 50%;
+  width: 50vmax;
   padding: 1%;
   background: white;
   border: 1px solid rgb(163, 163, 163);
   box-shadow: 0.1rem 0.5rem 0.9rem 0.5rem #dadada;
-  left: 20%;
+  left: 25vmax;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .popUpDiv p {
-  font-size: 18px;
+  font-size: 2vmax;
   font-weight: 500;
   /* margin-top: 30px; */
 }
@@ -164,8 +166,8 @@
   width: 10rem;
 }
 .formRow {
-  border-top: 1rem solid #fdc700;
-  border-bottom: 1rem solid #fdc700;
+  border-top: 1vmax solid #fdc700;
+  border-bottom: 1vmax solid #fdc700;
 }
 .formCol {
   padding: 1rem;
@@ -175,7 +177,7 @@
   border-bottom: 0.1rem solid rgb(49, 49, 49) !important;
   margin-top: 1rem !important;
   color: rgb(49, 49, 49) !important;
-  font-size: xx-large !important;
+  font-size: 2.3vmax !important;
   /* font-size: 1.2em; */
   /* font-style: bold; */
 }
@@ -208,44 +210,32 @@
   border: 0px !important;
 }
 .Cborder {
-  border: 5px solid #fdc700;
+  border: 0.3vw solid #fdc700;
   /* font-size: 1vw; */
 }
 .modalbtn {
   width: 95% !important;
 }
+.radioText {
+  margin-left: 2vw;
+}
 .BtnC2 {
-  font-size: 2.8rem !important;
-  padding-top: 0 !important;
-  height: 4rem !important;
+  /* margin-top: 1.5vmin !important; */
+  /* padding: 0px !important; */
+  font-size: 3.8vmax !important;
 }
 .btnC {
-  background-color: #fdc700 !important;
   border: 0 !important;
   width: 100%;
-  font-size: 3vw !important;
+  font-size: 2.2vw !important;
   text-align: center;
   align-items: center;
-  color: #ffffff;
-  margin-bottom: 2rem !important;
+  /* color: #ffffff; */
+  /* margin-bottom: 2rem !important; */
   box-shadow: 0px 5px 8px 0px #666;
-  border-radius: 0.5vw;
+  border-radius: 0.3vw !important;
 }
 @media only screen and (max-width: 768px) {
-  .BtnC2 {
-    /* font-size: 30px !important; */
-    height: 3.5rem !important;
-    width: 100%;
-  }
-  .formBtn {
-    /* font-size: 0rem !important; */
-    width: 100% !important;
-  }
-  .customSelect {
-    width: 100%;
-    /* font-size: xx-large !important; */
-    /* padding-top: 1vh !important; */
-  }
   .popUpDiv {
     position: fixed;
     top: 15%;
@@ -254,11 +244,13 @@
     left: 5%;
   }
   .book-flip {
-    height: 10% !important;
-    background-color: #4bbcc0;
+    /* height: 100% !important; */
+    /* background-color: #4bbcc0; */
+    padding: 2%;
   }
-  .btnC {
-    width: 97% !important;
+  .customSelect {
+    margin-left: 5px;
+    margin-right: 5px;
   }
   .book-characters {
     width: 60%;
@@ -269,7 +261,7 @@
     /* flex-direction: column; */
     display: block;
     text-align: center;
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -279,7 +271,7 @@
   .book-characters img {
     cursor: pointer;
     position: relative;
-    left: -44%;
+    left: 0%;
     width: 70px;
     height: 70px;
     zoom: 1;
@@ -294,17 +286,8 @@
 @media only screen and (max-width: 370px) {
   .BtnC2 {
     font-size: 28px !important;
-    height: 3.3rem !important;
+    /* height: 3.3rem !important; */
     padding: 0.5rem !important;
-    width: 100%;
-  }
-  .customSelect {
-    font-size: 30px !important;
-    height: 3.3rem !important;
-    /* padding-top: 1vh !important; */
-    width: 100%;
-  }
-  .btnC {
     width: 100%;
   }
 }

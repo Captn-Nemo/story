@@ -4,23 +4,14 @@ import Doodle from "../DoodleComponent/doodle";
 import { Card, Row, Col } from "react-bootstrap";
 import { CustomNavLink } from "../NavItem/NavItem";
 const badge = require("../../assets/images/badge.png");
-let colors = [
-  "#24aeb3",
-  "#fa7600",
-  "#fcbc01",
-  "#24aeb3",
-  "#44b9be",
-  "#fcbc01",
-  "#24aeb3",
-];
+let colors = ["#24aeb3", "#fa7600", "#fcbc01", "#44b9be", "#fcbc01"];
 let colorsBG = [
   "#c9ebec",
   "#fddbb4",
   "#feeeb2",
-  "#24aeb3",
+  "#c9ebec",
   "#fddbb4",
-  "#44b9be",
-  "#fddbb4",
+  "#feeeb2",
 ];
 // let teal = ["#c9ebec", "#4bbcc0"];
 // let orange = ["#fddbb4", "#fa8807"];
@@ -87,12 +78,16 @@ const FeaturedBook = (props) => {
   return (
     <>
       <div className="cardsView mx-auto">
-        <Row className="mx-auto p-5 d-flex cardcol">
+        <Row
+          style={{ paddingLeft: "4%", paddingRight: "4%" }}
+          className="mx-auto d-flex cardcol"
+        >
           {books.map((book, i) => {
             return (
               <Col
-                md={4}
-                sm={12}
+                lg={4}
+                md={12}
+                sm={10}
                 className="d-flex justify-content-center mx-auto mt-4"
               >
                 <CustomNavLink to="/projects/storically/book">
@@ -152,29 +147,36 @@ const FeaturedBook = (props) => {
                       />
                     </div>
 
-                    <Card.Body className="my-3">
-                      <Card.Subtitle className="asapbold mb-2 text-dark font-weight-bold">
+                    <Card.Body
+                      style={{ paddingLeft: "3%", paddingRight: "3%" }}
+                      className="cardBody"
+                    >
+                      <Card.Subtitle
+                        style={{ marginBottom: "3%", marginTop: "1%" }}
+                        className="asapbold text-dark f1"
+                      >
                         {book.title}
                       </Card.Subtitle>
-                      <Card.Text className="asap text-dark f10">
+                      <Card.Text className="asap text-dark fw1">
                         {book.desc}
                       </Card.Text>
-                      <Row
-                        md={{ span: 12 }}
-                        className="d-flex justify-content-between px-3"
-                      >
-                        <Card.Text
-                          className="asap bold"
-                          style={{
-                            color: colors[i % books.length],
-                            alignItems: "flex-end",
-                          }}
+                      <Row style={{ marginBottom: "0%", marginTop: "8%" }}>
+                        <Col
+                          md={true}
+                          className="d-flex justify-content-between align-items-center p-2 mx-2"
                         >
-                          Age {book.age}
-                        </Card.Text>
-                        <Card.Text className="asap bold f6 uppercase text-dark">
-                          AED{book.price}
-                        </Card.Text>
+                          <span
+                            className="asap bold f1"
+                            style={{
+                              color: colors[i % books.length],
+                            }}
+                          >
+                            Age {book.age}
+                          </span>
+                          <span className="asap bold f1 uppercase text-dark">
+                            AED{book.price}
+                          </span>
+                        </Col>
                       </Row>
                     </Card.Body>
                   </Card>

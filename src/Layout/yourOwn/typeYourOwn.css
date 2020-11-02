@@ -5,14 +5,23 @@
   width: 20rem !important;
 }
 .custonBtn {
-  width: 60%;
+  /* width: 60%; */
   font-weight: bold !important;
-  font-size: xx-large !important;
+  font-size: 2.2vmax !important;
+}
+/* .modalView {
+  width: 80vw !important;
+} */
+.modalBtn {
+  font-size: 1.5vw !important;
+}
+.options {
+  width: 60vw !important;
+}
+.style {
+  font-size: 5vmax;
 }
 
-.options {
-  width: 70% !important;
-}
 @media only screen and (max-width: 768px) {
   .custonBtn {
     width: 100%;

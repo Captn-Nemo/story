@@ -10,16 +10,20 @@ export const BottomSignUp = () => {
   return (
     <>
       <Row className="mb-3">
-        <Col md={12} className="d-flex justify-content-center mb-4 mx-auto">
+        <Col lg={12} className="d-flex justify-content-center mVert mx-auto">
           <h4 className="text-center">
-            <b className="asapbold darkblue f13 ">
+            <b className="asapbold darkblue f2">
               Even a little part of your story truly deserves a personalized
               book
             </b>
           </h4>
         </Col>
         <Row className="d-flex justify-content-center align-items-center">
-          <Col md={3} className="mx-auto d-flex justify-content-center">
+          <Col
+            style={{ marginBottom: "2%" }}
+            lg={3}
+            className="mx-auto d-flex justify-content-center"
+          >
             <Row className="mx-auto">
               <Col className="d-flex">
                 <div className="thumcont">
@@ -27,9 +31,9 @@ export const BottomSignUp = () => {
                 </div>
                 <div className="details">
                   <h5>
-                    <b className="darkblue asapbold signUptitle">Shipping</b>
+                    <b className="darkblue f1 asapbold signUptitle">Shipping</b>
                   </h5>
-                  <p className="text-muted signUpText asap">
+                  <p className="text-muted fw1 signUpText asap">
                     Worldwide shipping coming soon. Contact us for international
                     shipping queries.
                   </p>
@@ -37,7 +41,11 @@ export const BottomSignUp = () => {
               </Col>
             </Row>
           </Col>
-          <Col md={3} className="mx-auto d-flex justify-content-center">
+          <Col
+            style={{ marginBottom: "2%" }}
+            lg={3}
+            className="mx-auto d-flex justify-content-center"
+          >
             <Row className="mx-auto">
               <Col className="d-flex">
                 <div className="thumcont">
@@ -45,9 +53,11 @@ export const BottomSignUp = () => {
                 </div>
                 <div className="details">
                   <h5>
-                    <b className="darkblue asapbold signUptitle">Languages</b>
+                    <b className="darkblue f1 asapbold signUptitle">
+                      Languages
+                    </b>
                   </h5>
-                  <p className="text-muted asap signUpText">
+                  <p className="text-muted fw1 asap signUpText">
                     Multiple languages coming soon. Contact us to request a book
                     in your language
                   </p>
@@ -56,7 +66,11 @@ export const BottomSignUp = () => {
             </Row>
           </Col>
 
-          <Col md={3} className="mx-auto d-flex justify-content-center">
+          <Col
+            style={{ marginBottom: "2%" }}
+            lg={3}
+            className="mx-auto d-flex justify-content-center"
+          >
             <Row className="mx-auto">
               <Col className="d-flex">
                 <div className="thumcont">
@@ -64,11 +78,11 @@ export const BottomSignUp = () => {
                 </div>
                 <div className="details">
                   <h5>
-                    <b className="darkblue asapbold signUptitle">
+                    <b className="darkblue f1 asapbold signUptitle">
                       Superb quality
                     </b>
                   </h5>
-                  <p className="text-muted asap signUpText">
+                  <p className="text-muted fw1 asap signUpText">
                     Books that bring a smile on your face. Books that help you
                     remember and be remembered.
                   </p>
@@ -76,7 +90,11 @@ export const BottomSignUp = () => {
               </Col>
             </Row>
           </Col>
-          <Col md={3} className="mx-auto d-flex justify-content-center">
+          <Col
+            style={{ marginBottom: "2%" }}
+            lg={3}
+            className="mx-auto d-flex justify-content-center"
+          >
             <Row className="mx-auto">
               <Col className="d-flex">
                 <div className="thumcont">
@@ -84,11 +102,11 @@ export const BottomSignUp = () => {
                 </div>
                 <div className="details">
                   <h5>
-                    <b className="darkblue asapbold signUptitle">
+                    <b className="darkblue f1 asapbold signUptitle">
                       Personalised
                     </b>
                   </h5>
-                  <p className="text-muted asap signUpText">
+                  <p className="text-muted fw1 asap signUpText">
                     Personalize a story we have created or share a personal
                     story from your life
                   </p>
@@ -98,83 +116,37 @@ export const BottomSignUp = () => {
           </Col>
         </Row>
 
-        {/* <Col md={3} className="d-flex justify-content-center mb-4 mx-auto">
-          <Row className="mx-auto">
-            <Col className="d-flex">
-              <div className="thumcont ">
-                <Image src={thumb2} fluid />
-              </div>
-              <div className="px-3">
-                <h5>
-                  <b className="darkblue asapbold f12 h5">12 Languages</b>
-                </h5>
-                <p className="text-muted asap">
-                  Children across the world can enjoy our stories
-                </p>
-              </div>
-            </Col>
-          </Row>
-        </Col>
-        <Col md={3} className="d-flex justify-content-center mb-4 mx-auto">
-          <Row className="mx-auto">
-            <Col className="d-flex mx-auto">
-              <div className="thumcont">
-                <Image src={thumb3} fluid />
-              </div>
-              <div>
-                <h5>
-                  <b className="darkblue asapbold f12 h5">Superb Quality</b>
-                </h5>
-                <p className="text-muted asap">
-                  Lovingly made books , to be loved for years
-                </p>
-              </div>
-            </Col>
-          </Row>
-        </Col>
-        <Col md={3} className="d-flex justify-content-center mb-4 mx-auto">
-          <Row className="mx-auto">
-            <Col className="d-flex mx-auto">
-              <div className="thumcont ">
-                <Image src={thumb4} fluid />
-              </div>
-              <div>
-                <h5>
-                  <b className="darkblue asapbold f12 h5">Personalized</b>
-                </h5>
-                <p className="text-muted asap">
-                  Uniquly personalised stories, like no other
-                </p>
-              </div>
-            </Col>
-          </Row>
-        </Col> */}
-
         <Col
-          md={12}
-          className="d-flex flex-column justify-content-center align-items-center mt-5 mb-4 px-4"
+          style={{ marginBottom: "2%" }}
+          lg={12}
+          className="d-flex flex-column justify-content-center align-items-center mVert px-4"
         >
           <h4 style={{ width: "90%" }} className="text-center ">
-            <b className="asapbold darkblue f13 ">
+            <b className="asapbold darkblue f111 ">
               What are you waiting for? Connect with us, to connect to yourself
               and your personal history! Also, get loads of discounts and
               freebies
             </b>
           </h4>
         </Col>
-        <Col md={6} className="mx-auto d-flex">
-          <Form.Control
-            type="text"
-            className="customInput asap"
-            placeholder="Enter your Email Address"
-          />
-          <Button
-            block
-            variant="outline-success"
-            className="subsscribeBtn asap ml-2"
-          >
-            <b>Sign Me Up</b>
-          </Button>
+        <Col lg={12} className="mx-auto padHoriz mBottom">
+          <Row>
+            <Col lg={6} className="my-xs-3 mb-3">
+              <Form.Control
+                type="text"
+                className=" f111 asap"
+                placeholder="Enter your Email Address"
+              />
+            </Col>
+            <Col
+              lg={6}
+              className="d-flex justify-content-center align-items-center my-xs-3 mb-3"
+            >
+              <Button block variant="outline-success" className=" asap f111">
+                <b>Sign Me Up</b>
+              </Button>
+            </Col>
+          </Row>
         </Col>
       </Row>
     </>

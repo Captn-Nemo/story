@@ -1,13 +1,14 @@
 import React from "react";
 import { Row, Col, Button, Image } from "react-bootstrap";
 import FeaturedBook from "../../components/featuredBooks/featuredBooks";
+import MoreBooksView from "../../components/featuredBooks/moreBooksView";
 import "./titles.css";
 const Doodlebar = require("../../assets/images/doodlesBar.svg");
 export const MoreBooks = () => {
   return (
     <>
       <div className="wrapper2 mt-5">
-        <Row className="titleDiv doodleImg p-2">
+        <Row className="titleDiv doodleImg py-3">
           <Col
             md={1}
             // style={{ overflow: "hidden" }}
@@ -28,8 +29,7 @@ export const MoreBooks = () => {
             className="text-center d-flex align-items-center justify-content-center p-2"
           >
             <span
-              style={{ fontSize: 40 }}
-              className="chelsea white align-middle text2"
+              className="chelsea white  align-middle  f3"
               // style={{ textShadow: "-2px -2px 1px white" }}
             >
               MORE STORICALLY BOOKS
@@ -56,12 +56,7 @@ export const MoreBooks = () => {
           </Col>
         </Row>
 
-        <FeaturedBook />
-        <Col className="my-3 mx-auto d-flex justify-content-center align-items-center">
-          <Button className="btncustom amatic text-white" variant="warning">
-            SEE MORE
-          </Button>
-        </Col>
+        <MoreBooksView />
       </div>
     </>
   );

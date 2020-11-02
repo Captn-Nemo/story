@@ -14,7 +14,7 @@ function inputTextDefault(props) {
         style={{ left: props.dir === "left" ? "0" : "90%" }}
         alt=""
       />
-      <input
+      <textarea
         type="text"
         className="inputText"
         placeholder={props.holder}
@@ -35,7 +35,7 @@ function inputTextTeal(props) {
         style={{ left: props.dir === "left" ? "0" : "90%" }}
         alt=""
       />
-      <input type="text" className="inputText" placeholder={props.holder} />
+      <textarea type="text" className="inputText" placeholder={props.holder} />
     </div>
   );
 }
@@ -51,7 +51,7 @@ function inputTextOrange(props) {
         style={{ left: props.dir === "left" ? "0" : "90%" }}
         alt=""
       />
-      <input type="text" className="inputText" placeholder={props.holder} />
+      <textarea type="text" className="inputText" placeholder={props.holder} />
     </div>
   );
 }
@@ -67,7 +67,7 @@ function inputTextPurple(props) {
         style={{ left: props.dir === "left" ? "0" : "90%" }}
         alt=""
       />
-      <input type="text" className="inputText" placeholder={props.holder} />
+      <textarea type="text" className="inputText" placeholder={props.holder} />
     </div>
   );
 }
@@ -83,7 +83,7 @@ function inputTextYellow(props) {
         style={{ left: props.dir === "left" ? "0" : "90%" }}
         alt=""
       />
-      <input type="text" className="inputText" placeholder={props.holder} />
+      <textarea type="text" className="inputText" placeholder={props.holder} />
     </div>
   );
 }

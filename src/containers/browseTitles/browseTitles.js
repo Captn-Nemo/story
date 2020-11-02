@@ -7,8 +7,8 @@ const Doodlebar = require("../../assets/images/doodlesBar.svg");
 export const BrowseTitles = () => {
   return (
     <>
-      <div className="wrapper mb-5 ">
-        <Row className="titleDiv doodleImg">
+      <div className="wrapper">
+        <Row style={{ marginBottom: "3%" }} className="titleDiv doodleImg py-3">
           <Col
             md={3}
             // style={{ overflow: "hidden" }}
@@ -29,7 +29,7 @@ export const BrowseTitles = () => {
             className="text-center d-flex align-items-center justify-content-center"
           >
             <span
-              className="chelsea white align-middle text"
+              className="chelsea white f3 align-middle text"
               // style={{ textShadow: "-2px -2px 1px white" }}
             >
               BROWSE TITLES

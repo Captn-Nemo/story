@@ -1,24 +1,31 @@
 .formBtn {
   background-color: #fdc700;
   border: 0 !important;
-  font-size: 1.7rem;
+
+  /* font-size: 1.7rem; */
   margin-bottom: 1.5rem !important;
-  box-shadow: 0px 5px 8px 0px #666;
+  border-radius: 0.3vmax !important;
+  box-shadow: 0px 0.6vw 0.5vw -0.1vw #888 !important;
 }
 .formBtn2 {
   background-color: #4bbcc0 !important;
   border: 0 !important;
-  font-size: 1.7rem !important;
-  margin-bottom: 1.5rem !important;
+  /* font-size: 1.7rem !important; */
+  /* margin-bottom: 1.5rem !important; */
   box-shadow: 0px 5px 8px 0px #666;
+  border-radius: 0.3vmax !important;
+  box-shadow: 0px 0.6vw 0.5vw -0.1vw #888 !important;
 }
 .formBtn3 {
   background-color: #fa8807 !important;
   border: 0 !important;
-  font-size: 1.7rem !important;
+  /* font-size: 1.7rem !important; */
   margin-bottom: 1.5rem !important;
   box-shadow: 0px 5px 8px 0px #666;
+  border-radius: 0.3vmax !important;
+  box-shadow: 0px 0.6vw 0.5vw -0.1vw #888 !important;
 }
 .formBtn :active {
   border-width: 0px !important;
+  padding-top: 2px !important;
 }

@@ -1,10 +1,9 @@
 .customInput {
-  width: 100% !important;
-  height: 2.6rem !important;
+  width: 70% !important;
 }
-
 .subsscribeBtn {
   border: 0.12rem solid green !important;
+  border-radius: 0.3vmax !important;
 }
 .wrapper {
   /* border: 0.2rem solid yellow; */
@@ -40,7 +39,7 @@
   /* font-size: large !important; */
   /* font-weight: bold !important; */
   color: black !important;
-  font-size: medium !important;
+  font-size: 2.2vh !important;
   padding: 0 !important;
   font-family: "asapbold";
   margin: 0 !important;
@@ -49,15 +48,15 @@
 .fa-facebook {
   background: #ffff;
   color: #fdc700;
-  font-size: x-large !important;
-  width: 10%;
-  border-radius: 30px;
+  font-size: 2vmax !important;
+  width: 2.7vmax;
+  border-radius: 1.6vmax;
   display: flex;
   justify-content: center;
   align-items: center;
   /* height: 2rem; */
-  padding: 2%;
-  margin-left: 2.5%;
+  padding: 4%;
+  /* margin-left: .5% !important; */
 }
 .fa-facebook:hover {
   text-decoration: none;
@@ -68,15 +67,19 @@
 .fa-instagram {
   background: #ffff;
   color: #fdc700;
-  font-size: x-large !important;
-  width: 10%;
-  border-radius: 30px;
+  font-size: 2vmax !important;
+  width: 2.7vmax;
+  border-radius: 1.6vmax;
   display: flex;
   justify-content: center;
   align-items: center;
   /* height: 2rem; */
-  padding: 2%;
+  padding: 4%;
 }
+.footerRow {
+  padding: 4vw;
+}
+
 .fa-instagram:hover {
   text-decoration: none;
   border: 1px solid #fff;
@@ -86,7 +89,8 @@
 #basic-nav-dropdownBottom {
   /* font-weight: bold !important; */
   color: black !important;
-  font-size: medium !important;
+  /* font-size: medium !important; */
+  font-size: 2.2vh !important;
   padding: 0 !important;
   margin: 0 !important;
   /* background-color: aqua; */
@@ -95,12 +99,38 @@
   width: 100%;
   margin-left: -50px;
 }
+.mVert {
+  margin-top: 2vmax !important;
+  margin-bottom: 3vmax !important;
+}
+.padHoriz {
+  padding-left: 20vmax !important;
+  padding-right: 20vmax !important;
+}
+.mBottom {
+  margin-bottom: 5vmax !important;
+}
 @media only screen and (max-width: 786px) {
+  .fa-facebook {
+    font-size: 3vmax !important;
+    width: 3.9vmax;
+    border-radius: 3vmax !important;
+  }
+
+  .fa-instagram {
+    font-size: 3vmax !important;
+    width: 3.9vmax;
+    border-radius: 3vmax !important;
+  }
+  .padHoriz {
+    padding-left: 5vmax !important;
+    padding-right: 5vmax !important;
+  }
   .h5 {
     font-size: large !important;
   }
   .thumcont {
-    width: 20%;
+    width: 17%;
     padding: 1%;
     overflow: hidden;
     /* margin-left: 0 !important; */

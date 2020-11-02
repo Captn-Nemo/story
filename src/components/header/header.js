@@ -14,21 +14,21 @@ const Book = require("../../assets/images/Boutline.svg");
 export const HeaderTop = () => {
   return (
     <>
-      <div className="d-flex flex-column aling-items-end mt-5">
-        <div className="header-holder px-4 py-2">
+      <div className="d-flex flex-column aling-items-end my-3">
+        <div className="header-holder">
           <img src={Frame1} width="100%" />
           {/* <img src={arrow} width="10%" className="arrow" /> */}
           <button className="discover amatic">Discover</button>
         </div>
-        <div className="centerel bg-info">
+        <div className="centerel">
           <div className="bgImg d-flex justify-content-end align-items-center">
             <Image src={Book} fluid width="80%" />
           </div>
-          <div className="centerElements bg-success">
+          <div className="centerElements">
             <div className="">
               <Image src={Frame2} className="cTitle" />
             </div>
-            <div className="d-flex py-2 btnwrap bg-danger">
+            <div className="d-flex py-2 btnwrap">
               <button
                 className="btnc amatic font-weight-bold"
                 onClick={() =>
@@ -50,7 +50,7 @@ export const HeaderTop = () => {
             </div>
           </div>
         </div>
-        <div className="header-holderBottom px-4 py-2">
+        <div style={{ padding: "2.5%" }} className="header-holderBottom">
           <img src={Frame3} width="100%" />
         </div>
       </div>

@@ -24,18 +24,16 @@ function App() {
     <>
       <div className="App">
         <BrowserRouter>
-          <header>
-            <Row className="bg-info discount">
-              <Col>
-                <p
-                  // style={{ fontSize: "1vw" }}
-                  className="text-light text-center"
-                >
-                  place for discount code or whatever we need to add
-                </p>
-              </Col>
-            </Row>
-          </header>
+          <Row>
+            <Col className="py-2 asap d-flex justify-content-center align-items-center bgteal">
+              <span
+                // style={{ fontSize: "1vw" }}
+                className="text-light  f1"
+              >
+                place for discount code or whatever we need to add
+              </span>
+            </Col>
+          </Row>
           <nav className="sticky-top mb-3">
             <Navigation />
           </nav>

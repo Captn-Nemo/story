@@ -122,15 +122,31 @@ code {
 .lightblack {
   color: #5d5d5d;
 }
+.fw1 {
+  font-size: 0.8vw !important;
+}
 .f1 {
-  font-size: 1vw;
+  font-size: 1vw !important;
+}
+.f111 {
+  font-size: 1.5vw !important;
 }
 .f2 {
-  font-size: 2vw;
+  font-size: 2vw !important;
 }
 .f3 {
-  font-size: 3vw;
+  font-size: 3vw !important;
 }
+.f33 {
+  font-size: 3.5vw !important;
+}
+.fsub {
+  font-size: 2.5vw !important;
+}
+.ftitle {
+  font-size: 4vw !important;
+}
+
 .f14 {
   font-size: 3.5rem;
 }
@@ -193,6 +209,32 @@ code {
 @media only screen and (min-width: 1200px) {
   .f12 {
     font-size: 1vw;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .fw1 {
+    font-size: 2.5vw !important;
+  }
+  .f1 {
+    font-size: 3vw !important;
+  }
+  .f111 {
+    font-size: 4vw !important;
+  }
+  .f2 {
+    font-size: 6vw !important;
+  }
+  .f3 {
+    font-size: 6vw !important;
+  }
+  .f33 {
+    font-size: 3.5vw !important;
+  }
+  .fsub {
+    font-size: 2.5vw !important;
+  }
+  .ftitle {
+    font-size: 14vw !important;
   }
 }
 

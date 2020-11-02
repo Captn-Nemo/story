@@ -11,7 +11,7 @@ export const FormButton = (props) => {
         color: props.color,
         background: "#fff",
         borderRadius: 100,
-        fontSize: 40,
+        // fontSize: 40,
       }}
     >
       {props.title}

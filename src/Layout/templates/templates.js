@@ -9,6 +9,10 @@ import "./templates.css";
 const Doodlebar = require("../../assets/images/doodlesBar.svg");
 const headerImg = require("../../assets/images/browseHeader.png");
 const lamp = require("../../assets/images/lampGuided.png");
+const margins = { marginBottom: "2%" };
+const marginTB = { marginBottom: "3%", marginTop: "3%" };
+const marginTB2 = { marginBottom: "5%", marginTop: "5%" };
+
 export const Templates = () => {
   React.useEffect(() => {
     document.querySelector("body").scrollTo(0, 0);
@@ -17,29 +21,29 @@ export const Templates = () => {
     <>
       <section className="headerSection mt-2 bgyellow pt-4">
         <Row>
-          <Col className="d-flex justify-content-center align-items-center px-5">
-            <p className="amatic f15 text-white text-uppercase">
+          <Col className="d-none  d-sm-none d-xs-none d-md-none d-lg-block d-lg-flex justify-content-lg-center align-items-lg-center px-5">
+            <p className="amatic f3 text-white text-uppercase">
               It is the stories that make us think, wonder, dream and motivate
               us to create something new and innovative. It is the stories that
               make us who we are! It is time to write your own storybook, my
               friend!
             </p>
           </Col>
-          <Col className="justify-content-end d-none  d-sm-none d-xs-none d-md-block d-lg-block">
-            <Image src={headerImg} fluid />
+          <Col className="justify-content-end">
+            <Image src={headerImg} fluid width="100%" />
           </Col>
         </Row>
       </section>
-      <section className="mt-5">
-        <Row className="px-3 d-flex align-items-center">
+      <section>
+        <Row style={marginTB} className="px-3 d-flex align-items-center">
           <Col
-            md={4}
+            lg={4}
             className="d-flex justify-content-center align-items-center"
           >
-            <CustomButton className="amatic f17a ageBtn"> 0 -3 </CustomButton>
+            <CustomButton className="amatic ageBtn f2"> 0 -3 </CustomButton>
           </Col>
           <Col
-            md={4}
+            lg={4}
             className="d-flex justify-content-center align-items-center"
           >
             <CustomButton teal className="amatic f17a ageBtn">
@@ -48,7 +52,7 @@ export const Templates = () => {
             </CustomButton>
           </Col>
           <Col
-            md={4}
+            lg={4}
             className="d-flex justify-content-center align-items-center"
           >
             <CustomButton orange className="amatic f17a ageBtn">
@@ -59,11 +63,13 @@ export const Templates = () => {
         </Row>
         <FeaturedBook />
         <Col
-          md={12}
+          lg={12}
+          style={marginTB2}
           className="d-flex justify-content-center align-items-center"
         >
-          <img
-            width="60%"
+          <Image
+            width="100%"
+            fluid
             height="70px"
             id="featured-m"
             src={Doodlebar}
@@ -74,13 +80,13 @@ export const Templates = () => {
       <section>
         <Row className="tealbg mt-5 d-flex justify-content-md-around align-items-center">
           <Col
-            md={4}
-            className="d-sm-none d-xs-none d-md-block d-none d-lg-block"
+            lg={4}
+            className="d-sm-none d-xs-none d-md-none d-none d-lg-block"
           >
-            <Image src={lamp} fluid className="lamp" />
+            <Image src={lamp} fluid className="lamp" width="100%" />
           </Col>
           <Col
-            md={6}
+            lg={6}
             className="smalldiv px-5 mx-auto d-xs-flex d-sm-flex flex-column flex-sm-column flex-xs-column justify-content-sm-center align-items-sm-center justify-content-xs-center align-items-xs-center mt-4"
           >
             <div className="smalldiv">

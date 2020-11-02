@@ -3,7 +3,12 @@
   min-height: 100vh;
   text-align: center;
 }
-
+.longBook {
+  /* width: 200vw !important; */
+  height: 50vh !important;
+  font-weight: 700 !important;
+  /* font-size: 3vmax; */
+}
 .book-flip {
   border: 1px solid;
 }
@@ -44,9 +49,10 @@
     height: 60vh;
   }
 }
+
 @media (max-width: 375px) {
   .flipdiv {
     width: 98vh;
-    height: 30vh;
+    height: 45vh;
   }
 }

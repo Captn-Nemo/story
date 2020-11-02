@@ -27,7 +27,7 @@ export const Navigation = () => {
           collapseOnSelect
           expand="lg"
           className="pl-4 nav my-auto"
-          style={{ backgroundColor: "#ffffff" }}
+          style={{ backgroundColor: "#fffff" }}
         >
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
@@ -36,6 +36,37 @@ export const Navigation = () => {
           <Navbar.Brand href="#home" className="pl-2 navLogo">
             <Image src={navLogo} width="100%" height="100%" />
           </Navbar.Brand>
+          <div className="right-div d-none d-lg-none d-flex d-md-flex">
+            <button className="navBtn d-none d-md-block d-flex d-lg-flex align-items-center">
+              <Image
+                src={require("../../assets/images/usa.png")}
+                fluid
+                className="flagImg"
+              />
+              <span className="navitemRight ml-2 d-none d-lg-inline-block">
+                English
+              </span>
+            </button>
+            <button variant="" className="navBtn">
+              <FontAwesomeIcon
+                icon={faCartPlus}
+                color="#fdc700"
+                size={45}
+                className="icon"
+              />
+              <span className="navitemRight ml-2 d-none d-lg-inline-block">
+                MY ACCOUNT
+              </span>
+            </button>
+            <button variant="" className="navBtn">
+              <FontAwesomeIcon
+                icon={faUser}
+                color="#dadada"
+                size={45}
+                className="icon"
+              />
+            </button>
+          </div>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="#3">
@@ -144,42 +175,42 @@ export const Navigation = () => {
                 <FormControl
                   type="text"
                   placeholder="Search title/age"
-                  className="ml-4 custominput"
+                  className="custominput"
                 />
               </Form>
             </Nav>
           </Navbar.Collapse>
-          <button className="navBtn">
-            {/* <FontAwesomeIcon
-                  icon={faFlagUsa}
-                  color="#814dbe"
-                  size={45}
-                  className="icon"
-                /> */}
-            <Image src={require("../../assets/images/usa.png")} fluid />
-            <span className="navitemRight ml-2 d-none d-md-inline-block">
-              English
-            </span>
-          </button>
-          <button variant="" className="navBtn">
-            <FontAwesomeIcon
-              icon={faCartPlus}
-              color="#fdc700"
-              size={45}
-              className="icon"
-            />
-            <span className="navitemRight ml-2 d-none d-md-inline-block">
-              MY ACCOUNT
-            </span>
-          </button>
-          <Button variant="" className="btn btn-rounded d-md-none d-lg-none">
-            <FontAwesomeIcon
-              icon={faUser}
-              color="#dadada"
-              size={45}
-              className="icon"
-            />
-          </Button>
+          <div className="d-none d-md-none d-sm-none d-xs-none d-flex d-lg-flex">
+            <button className="navBtn d-none d-md-inline-block d-lg-inline-block">
+              <Image
+                src={require("../../assets/images/usa.png")}
+                fluid
+                className="flagImg"
+              />
+              <span className="navitemRight ml-2 d-none d-md-inline-block">
+                English
+              </span>
+            </button>
+            <button variant="" className="navBtn d-none d-lg-block">
+              <FontAwesomeIcon
+                icon={faCartPlus}
+                color="#fdc700"
+                size={45}
+                className="icon"
+              />
+              <span className="navitemRight ml-2 d-none d-lg-inline-block">
+                MY ACCOUNT
+              </span>
+            </button>
+            <Button variant="" className="d-none d-md-none d-lg-none">
+              <FontAwesomeIcon
+                icon={faUser}
+                color="#dadada"
+                size={45}
+                className="icon"
+              />
+            </Button>
+          </div>
         </Navbar>
       </div>
     </>

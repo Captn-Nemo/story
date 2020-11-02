@@ -25,7 +25,7 @@ const HomeLayout = () => {
         </Row>
       </section>
       <section>
-        <Row className="bg-light">
+        <Row className="bg-light mb-5 mb-xl-10">
           <YourStory />
         </Row>
       </section>

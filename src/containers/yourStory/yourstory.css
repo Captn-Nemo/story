@@ -4,34 +4,29 @@
   /* justify-content: flex-end; */
   /* align-items: flex-end; */
   text-align: right;
-  padding-bottom: 10vmin;
+  padding-bottom: 5vmin !important;
 }
 
 .leftBox {
   width: 80%;
   background-color: #feeeb2 !important ;
-  border: 0.5rem solid #fa8807 !important;
-  /* border-radius: 0.5rem !important; */
+  border: 0.5vw solid #fa8807 !important;
   align-items: center;
-  /* display: flex;
-  justify-content: center; */
+  padding-bottom: 3vh;
 }
 .rightBox {
-  /* width: 10rem;
-  height: 15rem; */
   width: 80%;
   background-color: #c9ebec !important ;
-  border: 0.5rem solid #804cbf !important;
-  /* border-radius: 0.5rem !important; */
+  border: 0.5vmax solid #804cbf !important;
   align-items: center;
   display: flex;
   justify-content: center;
   z-index: 2;
-  margin-top: 7.6rem !important;
+  /* padding-bottom: 3vh; */
 }
 .ship {
   transform: rotate(-20deg);
-  margin-left: 6rem;
+  margin-left: 7vw;
 }
 .girl {
   margin: auto;
@@ -42,30 +37,30 @@
 }
 .fBtn {
   width: 100% !important;
-  border-radius: 16px !important;
-  font-size: 40px !important;
+  border-radius: 1vw !important;
+  font-size: 3vw !important;
+  margin-bottom: 2vh !important;
   /* padding-left: 2rem !important;
   padding-right: 2rem !important; */
 }
 @media only screen and (max-width: 768px) {
   .fBtn {
-    font-size: 28px !important;
+    font-size: 5vmax !important;
   }
 
   .leftBox {
     margin: auto;
     width: 80%;
+    margin-bottom: 5vmax;
+    border: 1.1vmax solid #fa8807 !important;
   }
   .rightBox {
     margin: auto;
     width: 80%;
+    border: 1.1vmax solid #804cbf !important;
   }
   .girl {
-    margin: auto;
-    position: absolute;
-    top: -1.3rem;
-    left: 20%;
-    z-index: 1;
+    display: none !important;
   }
 }
 

@@ -1,5 +1,7 @@
 .ageBtn {
-  width: 20%;
+  width: 8vw;
+  /* height: 10vh; */
+  font-size: 2.2vw !important;
 }
 .smalldiv {
   width: 60% !important;
@@ -17,6 +19,7 @@
 @media only screen and (max-width: 768px) {
   .ageBtn {
     width: 80% !important;
+    font-size: 5vw !important;
   }
   .smalldiv {
     width: 90% !important;
