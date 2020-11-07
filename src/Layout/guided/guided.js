@@ -8,6 +8,9 @@ import { ContactFragment } from "../../components/smallContact/contact";
 import { BottomSignUp } from "../../containers/signup";
 import { addGuidedBook } from "../../store/actions";
 import "./guided.css";
+import QueryString from "qs";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
 const arrow = require("../../components/DoodleComponent/arrow2.svg");
 const lamp = require("../../assets/images/lamponly.svg");
 const girl = require("../../assets/images/girlGuide.svg");
@@ -18,22 +21,23 @@ const WH = require("../../assets/images/wecanhelp.png");
 const margins = { marginBottom: "2%" };
 const marginTB = { marginBottom: "4%", marginTop: "4%" };
 const clearState = {
-  name: "",
+  u_name: "",
   email: "",
   who: "",
-  narrate: "",
+  what_narrate: "",
   when: "",
   what: "",
   why: "",
   more: "",
 };
 export const Guided = () => {
+  const history = useHistory();
   React.useEffect(() => {
     document.querySelector("body").scrollTo(0, 0);
   }, []);
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
-  console.log(state);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState(clearState);
   const [tabs, setTabs] = useState({
     tab1: false,
@@ -50,17 +54,42 @@ export const Guided = () => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
   const scrollToRef = (id) =>
-    document.getElementById(id).scrollIntoView({ block: "center" });
+    document.getElementById(id).scrollIntoView({ block: "nearest" });
   function checkProperties(data) {
     return Object.values(data).every((o) => o !== "");
   }
+  const _placeGuidedOrder = async () => {
+    const res = await axios
+      .post(
+        "https://talkyake.in/admin/api/crateguidedorder",
+        QueryString.stringify(
+          {
+            ...form,
+            status: 1,
+            order_type: 3,
+          },
+          { encode: false }
+        )
+      )
+      .then((response) => {
+        alert("Order Placed");
+        setLoading(false);
+        history.push("/projects/storically");
+      })
+      .catch((err) => {
+        setLoading(false);
+        alert(
+          "Order Cannot Be placed right now please try again after some time"
+        );
+      });
+  };
   const submitForm = () => {
     if (!checkProperties(form)) alert("please Fill all the fields");
     else {
-      setTimeout(() => {
-        dispatch(addGuidedBook(form));
-        alert("Data added Successfully");
-      }, 1500);
+      setLoading(true);
+      dispatch(addGuidedBook(form));
+      localStorage.setItem("guidedBook", JSON.stringify(form));
+      _placeGuidedOrder();
     }
   };
 
@@ -155,9 +184,9 @@ export const Guided = () => {
             <Form.Control
               type="text"
               placeholder="NAME"
-              name="name"
+              name="u_name"
               required
-              value={form.name}
+              value={form.u_name}
               className="amatic guidedInput"
               onChange={(e) => inputHandler(e)}
             />{" "}
@@ -237,8 +266,8 @@ export const Guided = () => {
                 type="radio"
                 label="PERSONAL MEMORY"
                 className="amatic"
-                checked={form.narrate === "PERSONAL MEMORY" ? true : false}
-                name="narrate"
+                checked={form.what_narrate === "PERSONAL MEMORY" ? true : false}
+                name="what_narrate"
                 value="PERSONAL MEMORY"
                 onChange={(e) => inputHandler(e)}
                 id="formHorizontalRadios1"
@@ -247,9 +276,9 @@ export const Guided = () => {
                 type="radio"
                 label="CULTURAL FOLK"
                 value="CULTURAL FOLK"
-                checked={form.narrate === "CULTURAL FOLK" ? true : false}
+                checked={form.what_narrate === "CULTURAL FOLK" ? true : false}
                 className="amatic"
-                name="narrate"
+                name="what_narrate"
                 id="formHorizontalRadios2"
                 onChange={(e) => inputHandler(e)}
               />
@@ -257,10 +286,10 @@ export const Guided = () => {
                 type="radio"
                 label="OTHER"
                 value="OTHER"
-                checked={form.narrate === "OTHER" ? true : false}
+                checked={form.what_narrate === "OTHER" ? true : false}
                 className="amatic"
                 onChange={(e) => inputHandler(e)}
-                name="narrate"
+                name="what_narrate"
                 id="formHorizontalRadios3"
               />
             </div>
@@ -473,10 +502,11 @@ export const Guided = () => {
               block
               teal
               // type="submit"
+              disabled={loading}
               className="amatic submit font f2"
               onClick={() => submitForm()}
             >
-              SUBMIT
+              {loading ? "Please wait" : "SUBMIT"}
             </CustomButton>
           </Col>
         </Row>

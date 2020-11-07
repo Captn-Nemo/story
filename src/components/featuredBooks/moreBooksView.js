@@ -60,7 +60,7 @@ const MoreBooksView = (props) => {
                 sm={12}
                 className="d-flex justify-content-center mx-auto mt-4"
               >
-                <CustomNavLink to="/projects/storically/book">
+                <CustomNavLink to="/projects/storically/product">
                   <Card key={i} className="inner">
                     <div
                       className="imageBlock"

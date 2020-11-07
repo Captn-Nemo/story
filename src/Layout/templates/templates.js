@@ -23,10 +23,8 @@ export const Templates = () => {
         <Row>
           <Col className="d-none  d-sm-none d-xs-none d-md-none d-lg-block d-lg-flex justify-content-lg-center align-items-lg-center px-5">
             <p className="amatic f3 text-white text-uppercase">
-              It is the stories that make us think, wonder, dream and motivate
-              us to create something new and innovative. It is the stories that
-              make us who we are! It is time to write your own storybook, my
-              friend!
+              Stories make us think. They make us wonder and dream. Our stories
+              make us who we are. Let’s write your story!
             </p>
           </Col>
           <Col className="justify-content-end">

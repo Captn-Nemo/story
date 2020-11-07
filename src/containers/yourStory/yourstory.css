@@ -30,9 +30,6 @@
 }
 .girl {
   margin: auto;
-  position: absolute;
-  top: -1.3rem;
-  left: 23%;
   z-index: 1;
 }
 .fBtn {

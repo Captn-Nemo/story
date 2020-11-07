@@ -4,9 +4,16 @@
   text-align: center;
 }
 .longBook {
-  /* width: 200vw !important; */
+  width: 100% !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: left !important;
+  overflow-y: scroll !important;
+  text-align: justify !important;
   height: 50vh !important;
+  overflow-wrap: normal !important;
   font-weight: 700 !important;
+
   /* font-size: 3vmax; */
 }
 .book-flip {

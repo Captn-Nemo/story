@@ -236,6 +236,9 @@
   border-radius: 0.3vw !important;
 }
 @media only screen and (max-width: 768px) {
+  .galleryMsg-Book {
+    font-size: 2.5vw !important;
+  }
   .popUpDiv {
     position: fixed;
     top: 15%;

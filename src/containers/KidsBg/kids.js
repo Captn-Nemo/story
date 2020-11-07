@@ -12,9 +12,9 @@ export const KidsBG = () => {
         <Image src={kids} className="mx-auto kidsimg" fluid />
 
         <p className="amatic f3 mr-5 amatic font-weight-bold text-white d-none d-sm-none d-xs-none d-md-none d-lg-block">
-          Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. eiusmod
-          tempor incididunt ut labore et dolore magna aliqua.
+          Stories communicate cultures, histories, and universal truths in
+          intricate and engaging narratives. They teach us about the world and
+          ourselves.
         </p>
       </Col>
     </>

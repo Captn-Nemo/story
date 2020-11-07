@@ -17,11 +17,8 @@ const LongBookPreview = ({ data }) => {
     >
       {data.map((el, i) => {
         return (
-          <div
-            key={i}
-            className="p-4 d-flex justify-content-start align-items-start text-justify longBook bgteal patrickhand f1"
-          >
-            {el}
+          <div key={i} className="p-4 longBook bgteal patrickhand f1">
+            <p>{el}</p>
           </div>
         );
       })}

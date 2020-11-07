@@ -91,3 +91,12 @@
 .section {
   height: 100vh;
 }
+
+@media only screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 0.3rem;
+    background-color: transparent;
+    opacity: 0.2;
+    border-radius: 1rem;
+  }
+}

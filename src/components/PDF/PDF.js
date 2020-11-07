@@ -3,13 +3,18 @@ import { jsPDF } from "jspdf";
 import "./PDF.css";
 import htmlToImage from "html-to-image";
 import { CustomButton } from "../customFormElements/customButton";
+
 import { Row, Col, ProgressBar } from "react-bootstrap";
-export default class BookGenerator extends Component {
+import { connect } from "react-redux";
+
+class BookGenerator extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isloading: false,
       loadedBook: [],
+      payment: false,
+      book: {},
       idNumbers: 0,
       data: [],
       finished: false,
@@ -17,7 +22,11 @@ export default class BookGenerator extends Component {
   }
   componentWillMount() {
     document.querySelector("body").scrollTo(0, 0);
-    this.setState({ loadedBook: JSON.parse(localStorage.getItem("book")) });
+    this.setState({
+      loadedBook: JSON.parse(localStorage.getItem("book")),
+      payment: localStorage.getItem("payment"),
+      book: JSON.parse(localStorage.getItem("normalBook")),
+    });
   }
   async generatePDF() {
     this.setState({ isloading: true });
@@ -25,33 +34,11 @@ export default class BookGenerator extends Component {
     let x = loadedBook.loadedBook[0].pages.length;
     let y = 0;
     while (x !== 0) {
-      //   await html2canvas(document.getElementById(`page${y}`), {
-      //     scale: 1,
-      //     allowTaint: true,
-      //     scrollX: 0,
-      //     backgroundColor: "#dadada",
-      //     scrollY: -window.scrollY,
-      //     height: 1024,
-      //     windowHeight: 1024,
-      //   }).then((canvas) => {
-      //     var imgHeight = 870;
-      //     var imgWidth = 576;
-      //     var imgData = canvas.toDataURL("image/jpeg", 0.8);
-      //     data.push(imgData);
-      //     var width = book.internal.pageSize.getWidth();
-      //     var height = book.internal.pageSize.getHeight();
-      //     book.addImage(imgData, "PNG", 0, 0, width, height);
-      //     var heightLeft = imgHeight;
-      //     var position = 0;
-      //     // book.addImage(image, "PNG", 0.2, 0.2, "", "FAST");
-      //     book.addPage();
-      //   });
       let node = document.getElementById(`page${y}`);
       await htmlToImage
         .toJpeg(node, { quality: 0.6, backgroundColor: "#fff" })
         .then(function (canvas) {
           data.push(canvas);
-          // document.appendChild(img);
         })
         .catch(function (error) {
           console.error("oops, something went wrong!", error);
@@ -60,13 +47,11 @@ export default class BookGenerator extends Component {
       x = x - 1;
     }
     this.setState({ finished: true, isloading: false });
-    // book.save(`MYPdf.pdf`);
   }
   createMarkup(svgtxt, id) {
     let svgid = this.cleanCode(svgtxt, 0);
     return { __html: svgid };
   }
-
   cleanCode = (code, id) => {
     const { loadedBook } = this.state;
     let newcode = code;
@@ -88,11 +73,13 @@ export default class BookGenerator extends Component {
             .replace(/\bHim\b/g, "Her")
             .replace(/\bHis\b/g, "Her")
             .replace(/\bhimself\b/g, "herself");
+    newcode = newcode.replace(/\bthe playground\b/g, loadedBook.fav);
+    newcode = newcode.replace(/\b5 years\b/g, loadedBook.age + " years");
     newcode = newcode.replace(/cls-/g, "pg" + id + "-");
     return newcode;
   };
   getFile = () => {
-    const { loadedBook, data } = this.state;
+    const { data } = this.state;
     var book = new jsPDF("l", "pt", "a4", true);
     var width = book.internal.pageSize.getWidth();
     var height = book.internal.pageSize.getHeight();
@@ -102,13 +89,14 @@ export default class BookGenerator extends Component {
     });
     book.deletePage(book.internal.getNumberOfPages());
     book.save(`MYPdf.pdf`);
-    console.log(data.length);
   };
   render() {
-    const { loadedBook, finished, isloading } = this.state;
+    const { loadedBook, finished, isloading, payment, book } = this.state;
+    console.log(payment, book);
+
     return (
       <div className="mt-5">
-        {loadedBook ? (
+        {loadedBook && payment ? (
           <div>
             <Row className="">
               <Col
@@ -117,17 +105,23 @@ export default class BookGenerator extends Component {
               >
                 <div className="div">
                   <h2> Welcome {loadedBook.fname}</h2>
-                  <p>Please click on Generate Book to prepare your pdf file</p>
-                  <CustomButton
-                    orange
-                    onClick={() => {
-                      this.generatePDF();
-                    }}
-                    disabled={isloading}
-                  >
-                    {" "}
-                    Generate Book{" "}
-                  </CustomButton>
+                  <p>
+                    {book.mode === "e-book"
+                      ? "Please click on Generate Book to prepare your pdf file"
+                      : "Your Book Will Be printed and will reach shortly"}
+                  </p>
+                  {book.mode === "e-book" && (
+                    <CustomButton
+                      orange
+                      onClick={() => {
+                        this.generatePDF();
+                      }}
+                      disabled={isloading}
+                    >
+                      {" "}
+                      Generate Book{" "}
+                    </CustomButton>
+                  )}
                   {this.state.isloading ? (
                     <Col>
                       <ProgressBar variant="info" animated now={45} />
@@ -452,7 +446,22 @@ export default class BookGenerator extends Component {
               ))}
             </div>
           </div>
-        ) : null}
+        ) : (
+          <>
+            <Row className="">
+              <Col
+                md={12}
+                className="mx-auto d-flex justify-content-center align-items-center"
+              >
+                <div className="div">
+                  <h2> BAD REQUEST</h2>
+                  <p>You are not authorized to view this page</p>
+                  <p>Please Go Back to Home Page</p>
+                </div>
+              </Col>
+            </Row>
+          </>
+        )}
         {/* {loadedBook ? <div >
                         
                     </div> : null} */}
@@ -460,3 +469,9 @@ export default class BookGenerator extends Component {
     );
   }
 }
+export default connect((state) => {
+  return {
+    mode: state.book_mode,
+    paid: state.paid, // Or any value
+  };
+})(BookGenerator);

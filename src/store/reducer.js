@@ -1,13 +1,20 @@
-import { UPDATE_GUIDED } from "./actions";
+import {
+  UPDATE_GUIDED,
+  UPDATE_PAYMENT,
+  UPDATE_BOOK_MODE,
+  NORMAL_ORDER,
+  LONGBOOK_ORDER,
+  ORDER_TYPE,
+  UPDATE_FORM,
+} from "./actions";
 const initialSate = {
   guided: {},
-  categories: {
-    WHO: null,
-    WHAT: null,
-    WHICH: null,
-  },
-  flagForm: false,
-  showForm: false,
+  normal: {},
+  form: {},
+  orderType: 1,
+  longBook: {},
+  paid: false,
+  book_mode: "e-book",
 };
 
 const reducer = (state = initialSate, action) => {
@@ -16,6 +23,36 @@ const reducer = (state = initialSate, action) => {
       return {
         ...state,
         guided: action.payload,
+      };
+    case UPDATE_FORM:
+      return {
+        ...state,
+        form: action.payload,
+      };
+    case UPDATE_PAYMENT:
+      return {
+        ...state,
+        paid: true,
+      };
+    case UPDATE_BOOK_MODE:
+      return {
+        ...state,
+        book_mode: action.payload,
+      };
+    case NORMAL_ORDER:
+      return {
+        ...state,
+        normal: action.payload,
+      };
+    case LONGBOOK_ORDER:
+      return {
+        ...state,
+        longBook: action.payload,
+      };
+    case ORDER_TYPE:
+      return {
+        ...state,
+        orderType: action.payload,
       };
     case "UPDATE":
       return {

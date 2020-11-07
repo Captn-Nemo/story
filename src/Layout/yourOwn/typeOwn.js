@@ -6,14 +6,12 @@ import { CustomButton } from "../../components/customFormElements/customButton";
 import { BottomSignUp } from "../../containers/signup";
 import { ContactFragment } from "../../components/smallContact/contact";
 import LongBookPreview from "../../components/longBookPreview";
+import QueryString from "qs";
+import axios from "axios";
+import { useHistory } from "react-router-dom";
+
 const brushL = require("../../components/DoodleComponent/pen.svg");
-// const Doodlebar = require("../../assets/images/doodlesBar.svg");
-const lamp = require("../../assets/images/lamp.png");
 const lamp2 = require("../../assets/images/lamp2.png");
-const initalState = {
-  pages: 0,
-  text: [],
-};
 
 /* ----------------------------Book Preview Modal --------------------------- */
 
@@ -41,8 +39,12 @@ function PreviewModal(props) {
           md={12}
           className="px-4 d-flex justify-content-between align-items-center"
         >
-          <CustomButton className="bgteal modalBtn  amatic">
-            Submit
+          <CustomButton
+            onClick={props.order}
+            className="bgteal modalBtn  amatic"
+            disabled={props.loading}
+          >
+            {props.loading ? "Please Wait" : "Submit"}
           </CustomButton>
           <CustomButton className="modalBtn amatic" onClick={props.onHide}>
             Close
@@ -55,22 +57,118 @@ function PreviewModal(props) {
 
 /* ------------------------------------------------------MAIN FUNCTION ------------------------------- */
 export const TypeYourOwn = () => {
+  const history = useHistory();
   React.useEffect(() => {
     document.querySelector("body").scrollTo(0, 0);
   }, []);
 
   /* ----------------------------------State Vairables----------------------- */
   const [modalShow, setModalShow] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const [story, setStory] = useState({
     pages: 0,
     text: [],
   });
   const [form, setForm] = useState({
-    name: "",
+    u_name: "",
     email: "",
   });
+  console.log(form);
   const [single, setSingle] = useState("");
+
+  const _addPage = async (id) => {
+    var totalPages = 0;
+    for (let i = 0; i < story.pages; i++) {
+      const res = await axios
+        .post(
+          "https://talkyake.in/admin/api/createlongorderpages",
+          QueryString.stringify(
+            {
+              pages: i + 1,
+              logbook_id: id,
+              text: story.text[i],
+            },
+            { encode: false }
+          )
+        )
+        .catch((err) => {
+          setLoading(false);
+          setError(true);
+          console.log("Page Adding Error");
+          return;
+        });
+      // .then((response) => {
+      //   console.log("Added Page", totalPages);
+      // })
+
+      if (res.data) {
+        totalPages = totalPages + 1;
+      }
+    }
+    console.log(totalPages, story.pages);
+    if (totalPages == story.pages) return true;
+    else return false;
+  };
+
+  const _placeLongdOrder = async () => {
+    setLoading(true);
+    const res = await axios
+      .post(
+        "https://talkyake.in/admin/api/cratelongorder",
+        QueryString.stringify(
+          {
+            ...form,
+            status: 1,
+            order_type: 2,
+          },
+          { encode: false }
+        )
+      )
+      .then(async (response) => {
+        const id = JSON.stringify(response.data.payload.id);
+        console.log(id);
+
+        // Promise.all(
+        //   story.text.map((pageText, i) => {
+        //     return new Promise(async (resolve) => {
+        const result = await _addPage(id)
+          .then(() => {
+            if (error) {
+              setLoading(false);
+              alert("Order Failed");
+              setError(false);
+            } else {
+              setLoading(false);
+              alert("OrderPlaced SuccessFUlly");
+              history.push("/projects/storically");
+            }
+          })
+          .catch(() => {
+            setLoading(false);
+            alert("Order Failed");
+          });
+        console.log(result);
+        // if (result) {
+        //   setLoading(false);
+        //   alert("OrderPlaced SuccessFUlly");
+        //   history.push("/projects/storically");
+        // } else {
+        //   setLoading(false);
+        //   alert("Order Failed");
+        // }
+        //     });
+        //   })
+        // ).then((resp) => {console.log(resp)});
+      })
+      .catch((err) => {
+        setLoading(false);
+        alert(
+          "Order Cannot Be placed right now please try again after some time"
+        );
+      });
+  };
 
   /* ---------------------------------Local Function-------------------- */
 
@@ -93,7 +191,7 @@ export const TypeYourOwn = () => {
   };
   const saveToLocal = () => {
     if (story.text.length == 0) {
-      alert("Cannot Add Empty Page");
+      alert("Cannot Add Empty Book");
       return;
     } else {
       try {
@@ -104,13 +202,13 @@ export const TypeYourOwn = () => {
       }
     }
   };
-  console.log(single);
-  console.log(story);
   return (
     <>
       <PreviewModal
         show={modalShow}
         data={story.text}
+        loading={loading}
+        order={_placeLongdOrder}
         onHide={() => setModalShow(false)}
       />
       <section className="mt-2" id="longFormText">
@@ -155,16 +253,16 @@ export const TypeYourOwn = () => {
           </Col>
         </Row>
       </section>
-      {/* <section className="px-5">
+      <section className="px-5">
         <Row className="mx-auto mt-5  my-row">
           <Col md={4} className="mb-3">
             {" "}
             <Form.Control
               type="text"
               placeholder="NAME"
-              name="name"
+              name="u_name"
               required
-              value={form.name}
+              //value={form.u_name}
               className="amatic guidedInput"
               onChange={(e) => inputHandler(e)}
             />{" "}
@@ -172,17 +270,21 @@ export const TypeYourOwn = () => {
           <Col md={8} className="mb-3">
             {" "}
             <Form.Control
-              type="text"
+              type="email"
+              id="email"
               name="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
               onChange={(e) => inputHandler(e)}
-              required
-              value={form.email}
+              // value={form.email}
               placeholder="EMAIL"
               className="amatic guidedInput "
+              required
+              autocomplete="email"
+              autofocus
             />{" "}
           </Col>
         </Row>
-      </section> */}
+      </section>
       <section className="mt-5">
         <AreaForm value={single} onChange={(e) => setSingle(e.target.value)} />
       </section>
@@ -193,7 +295,12 @@ export const TypeYourOwn = () => {
             sm={12}
             className="column d-flex justify-content-center align-items-center"
           >
-            <CustomButton className="custonBtn amatic">SAVE</CustomButton>
+            <CustomButton
+              onClick={() => saveToLocal()}
+              className="custonBtn amatic"
+            >
+              SAVE
+            </CustomButton>
           </Col>
           <Col
             md={4}
@@ -214,10 +321,13 @@ export const TypeYourOwn = () => {
             className="column d-flex justify-content-center align-items-center"
           >
             <CustomButton
+              type="submit"
               teal={true}
               onClick={() => {
-                if (story.text.length == 0) return;
-                else setModalShow(true);
+                if (story.text.length == 0) {
+                  alert("Please Add a page then submit");
+                  return;
+                } else setModalShow(true);
               }}
               className="custonBtn amatic"
             >

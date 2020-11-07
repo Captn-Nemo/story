@@ -15,10 +15,9 @@ export const Footer = () => {
         <div className=" d-flex flex-column justify-content-center align-items-center  d-lg-flex flex-lg-column  justify-content-lg-center align-items-lg-start d-sm-flex flex-sm-column  justify-content-sm-center align-items-sm-center d-xs-flex flex-xs-column  justify-content-xs-center align-items-xs-center">
           <h6 className="amatic text-white f2">STORICALLY</h6>
           <p className="asapbold text-justify f1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-            ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas
-            accumsan lacus vel facilisis.
+            Storically brings new meaning to the phrase immersed in a book by
+            pushing the boundaries of personalized-books. We help people connect
+            to family, friends and community in a meaningful way.
           </p>
           <div className="d-flex justify-centent-around align-items-start">
             <a

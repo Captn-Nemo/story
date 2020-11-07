@@ -1,0 +1,58 @@
+/*---------------------------------STORICALLY API STRUCTURE ---------------------------*/
+
+
+	 order_type = 1 for normal book ordering
+	 order_type = 2 for type long form book ordering
+	 order_type = 3 for guided book ordering 
+
+	 // payload is different for each order type 
+
+	/* NORMAL BOOK ORDERING (order_type  = 1 ) */
+
+		payload = {
+			"name":"Sajith SR",
+			"email":"sajith1234@gmail.com",
+			"mob_no":9747878855,
+			"order_type" : 1,
+			"price":50,
+			"bookData" : {
+				"b_title" :	"book",
+				"mode" : "e-book",
+				"age"  :3,
+				"place":"the playground"
+			}
+		}
+
+
+
+
+/* TYPE LONG BOOK ORDERING (order_type  = 2 ) */
+
+		payload = {
+			"u_name":"Sajith SR",
+			"email":"sajith1234@gmail.com",
+			"mob_no":9747878855,
+			"order_type" : 2,
+			"bookData" : {
+				"pages":0,
+				"text":["page1 text","page2 text","page3 text"]
+			}
+		}
+
+
+/* GUIDED PAGE BOOK ORDERING (order_type  = 1 ) */
+
+		payload = {
+			"u_name":"Sajith SR",
+			"email":"sajith1234@gmail.com",
+			"mob_no":9747878855,
+			"order_type" : 3,
+			"bookData" : {
+				  "who": "who is the story for ?",
+				  "what_narrate": "what would you like to narrate ?",
+				  "when": "when did happen ?",
+				  "what": "what happened ?",
+				  "why": "why it is important for you ?",
+				  "more": "do you want to add more ?",
+			}
+		}

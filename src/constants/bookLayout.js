@@ -434,7 +434,7 @@ export const BookLayout = [
     _id: "5f3f4cf1146ceb16ec65d824",
     title: "Inara Goes to School",
     age: "4-8 years",
-    price: "40 AED",
+    price: 40,
   },
 ];
 

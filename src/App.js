@@ -11,14 +11,12 @@ import { Navigation } from "./containers/navigation/navigation";
 import { Row, Col } from "react-bootstrap";
 import { Footer } from "./containers/footer";
 import BookSummary from "./components/BookComponent/summaryBook";
-import FolosiComponent from "./components/Folosi/Folosi";
-// import BookGenerator from './components/bookgenerator'
 import BookGenerator from "./components/PDF/PDF";
 import { TypeYourOwn } from "./Layout/yourOwn/typeOwn";
 import { Templates } from "./Layout/templates/templates";
 import { Guided } from "./Layout/guided/guided";
-//import Bubble from './components/BrowseComponent/Bubble';
-// const Doodlebar = require("./assets/images/doodlesBar.svg");
+import Payment from "./components/Payment/Payment";
+
 function App() {
   return (
     <>
@@ -45,7 +43,7 @@ function App() {
               <BookGenerator />
             </Route>
             <Route path="/projects/storically/book/payment" exact>
-              <FolosiComponent />
+              <Payment />
             </Route>
             <Route path="/projects/storically/yourown" exact>
               <TypeYourOwn />

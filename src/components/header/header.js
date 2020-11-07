@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col, Image } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 import Button from "../../components/FormComponent/button";
 import { CustomButton } from "../customFormElements/customButton";
 import { CustomNavLink } from "../NavItem/NavItem";
@@ -12,6 +13,7 @@ const Frame4 = require("../../assets/images/DOODLES.png");
 const Book = require("../../assets/images/Boutline.svg");
 
 export const HeaderTop = () => {
+  const history = useHistory();
   return (
     <>
       <div className="d-flex flex-column aling-items-end my-3">
@@ -41,9 +43,7 @@ export const HeaderTop = () => {
 
               <button
                 className="btnc amatic left"
-                onClick={() =>
-                  window.location.replace("/projects/storically/yourown")
-                }
+                onClick={() => history.push("/projects/storically/yourown")}
               >
                 <b>share your story</b>
               </button>
